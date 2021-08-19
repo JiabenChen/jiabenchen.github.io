@@ -1,0 +1,217 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Xinhang's Homepage</title>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+
+        <!-- UIkit CSS -->
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/uikit@3.3.1/dist/css/uikit.min.css" />
+
+        <!-- UIkit JS -->
+        <script src="https://cdn.jsdelivr.net/npm/uikit@3.3.1/dist/js/uikit.min.js"></script>
+        <script src="https://cdn.jsdelivr.net/npm/uikit@3.3.1/dist/js/uikit-icons.min.js"></script>
+
+        <style>
+            .uk-label{
+                color: black;
+                text-transform: none;
+                background-color: transparent;
+                border: 1px solid black;
+                padding: 0px 3px;
+            }
+        </style>
+    </head>
+    <body>
+        <nav class="uk-navbar-container uk-margin uk-light" style="background-color: #3d95e7" uk-navbar>
+            <div class="uk-navbar-left">
+                <a class="uk-navbar-item uk-logo uk-text-primary" href="index.html">Xinhang's Homepage</a>
+            </div>
+            <div class="uk-navbar-right">
+                <ul class="uk-navbar-nav">
+                    <li class="uk-active uk-visible@m"> <a href="index.html"> Home </a> </li>
+                    <li class="uk-active uk-visible@m"> <a href="index.html#research"> Projects </a> </li>
+                    <li class="uk-active uk-visible@m"> <a href="index.html#contact"> Contact </a> </li>
+                    <li class="uk-active uk-visible@m"> <a href="index.html#bio"> About </a> </li>
+                    <a class="uk-active uk-navbar-toggle uk-hidden@m" uk-navbar-toggle-icon href="#offcanvas-nav-primary" uk-toggle></a>
+                </ul>
+            </div>
+        </nav>
+
+        <div id="offcanvas-nav-primary" uk-offcanvas="overlay: true">
+            <div class="uk-offcanvas-bar uk-flex uk-flex-column">
+                <ul class="uk-nav uk-nav-primary uk-nav-center uk-margin-auto-vertical">
+                    <li class="uk-active"> <a href="index.html"> Home </a> </li>
+                    <li class="uk-active"> <a href="index.html#research"> Projects </a> </li>
+                    <li class="uk-active"> <a href="index.html#contact"> Contact </a> </li>
+                    <li class="uk-active"> <a href="index.html#bio"> About </a> </li>
+                </ul>
+            </div>
+        </div>
+
+        <!-- Header -->
+        <!-- <div class="uk-section uk-flex uk-flex-center uk-section-secondary uk-light"> -->
+        <div class="uk-flex uk-flex-center">
+            <div class="uk-container uk-width-1-1 uk-width-3-4@m uk-padding-small" uk-grid>
+            <!-- <div class="uk-container uk-container-large uk-flex-middle uk-padding-small" uk-grid> -->
+                <a class="uk-flex uk-flex-center uk-width-1-1 uk-width-auto@m uk-margin-top" href="#">
+                    <div class="uk-width-1-1 uk-width-medium@s uk-visible@l">
+                        <img class="uk-responsive-height uk-responsive-width" src="images/photo_dorm.png" alt="Portrait" />
+                    </div>
+                </a>
+                <div class="uk-width-expand uk-margin-remove">
+                    <p class="uk-h1 uk-text-center uk-text-left@m uk-width-expand@m uk-margin-remove">
+                        Xinhang Liu
+                    </p>
+                    <p>
+                        I am a rising senior at <a href="http://sist.shanghaitech.edu.cn">SIST</a> of <a href="https://www.shanghaitech.edu.cn/eng/">ShanghaiTech University</a>. 
+                        I am studying and doing scientific research in the areas of deep learning, computer vision, and computational photography, under the supervision of 
+                        <a href="http://vic.shanghaitech.edu.cn/vrvc/en/people/">Prof. Jingyi Yu</a> at the <a href="http://vic.shanghaitech.edu.cn/vrvc/en/">VRVC Center</a>.
+                        During the summer of 2021, I also worked remotely with <a href="https://theairlab.org/team/sebastian/">Prof. Sebastian Scherer</a> at the <a href="https://theairlab.org">AirLab</a>, 
+                        thourgh <a href="https://riss.ri.cmu.edu">RISS</a> program.
+                        My ongoing research topics are <a href="#nr">neural representation</a> and <a href="#irrgb">IR-RGB registration</a>.
+                    </p>
+                    <!-- Buttons for desktop device -->
+                    <div class="uk-margin-horizontal uk-visible@m">
+                        <a href="#contact" class="uk-button uk-button-default uk-margin-small-right" uk-icon="mail"> Mail </a>
+                        <a href="https://github.com/DarlingHang" class="uk-button uk-button-default uk-margin-small-right" uk-icon="github"> GitHub </a>
+                        <a href="https://www.linkedin.com/in/xinhang-l-a36913205/" class="uk-button uk-button-default uk-margin-small-right" uk-icon="linkedin"> LinkedIn </a>
+                    </div>
+                    <!-- Buttons for mobile device -->
+                    <div class="uk-margin-horizontal uk-flex uk-flex-center uk-hidden@m">
+                        <a href="#contact" class="uk-button uk-button-default uk-margin-small-right" uk-icon="mail"></a>
+                        <a href="https://github.com/DarlingHang" class="uk-button uk-button-default uk-margin-small-right" uk-icon="github"></a>
+                        <a href="https://www.linkedin.com/in/xinhang-l-a36913205/" class="uk-button uk-button-default uk-margin-small-right" uk-icon="linkedin"></a>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Body -->
+        <div class="uk-flex uk-flex-center uk-margin-remove-top uk-margin-medium-bottom">
+        <div class="uk-container uk-width-1-1 uk-width-3-4@m uk-padding-small">
+            <p id="research" class="uk-h2 uk-text-bold">Research</p>
+            <ul class="uk-list uk-list-divider">
+
+                      
+   
+
+            <li>
+                <ul class="uk-list uk-margin-small-bottom">
+                    <li>
+                        <div id="nr" class="uk-text-lead">
+                            <!-- <span class="uk-label">Research</span> -->
+                            Editable Free-Viewpoint Video using a Layered Neural Representation
+                        </div>
+                        <div>  <a href="https://jiakai-zhang.github.io/">Jiakai Zhang</a>, <u>Xinhang Liu</u>, Xinyi Ye, Fuqiang Zhao, Yanshun Zhang, <a href="https://wuminye.com">Minye Wu</a>, Yingliang Zhang, <a href="https://www.xu-lan.com">Lan Xu</a> and <a href="http://vic.shanghaitech.edu.cn/vrvc/en/people/">Jingyi Yu</a> </div>
+                        <b><i> SIGGRAPH  2021</i></b>
+                        <div> In this paper we proposed the first approach for editable photo-realistic free-viewpoint video generation for large-scale dynamic scenes using only sparse 16 cameras. </div>
+                        <a href="https://arxiv.org/pdf/2104.14786.pdf" class="uk-button uk-button-text">[Paper]</a>
+                        <a href="https://jiakai-zhang.github.io/st-nerf/" class="uk-button uk-button-text">[Project]</a>
+                        <a href="https://github.com/DarlingHang/st-nerf" class="uk-button uk-button-text">[Code]</a>
+                        <a href="https://jiakai-zhang.github.io/st-nerf/#video" class="uk-button uk-button-text">[Video]</a>
+                        <a href="https://www.bilibili.com/video/BV1e84y1F7YT?from=search&seid=3702928849178808925" class="uk-button uk-button-text">[Video (bilibili)]</a>
+                    </li>
+                </ul>
+                <img src="images/taekwondo.gif" style="width: 70%;display:block;margin-left: auto;margin-right: auto;">
+            </li>
+
+            <li>
+                <ul class="uk-list uk-margin-small-bottom">
+                    <li>
+                        <div id="irrgb" class="uk-text-lead">
+                            <!-- <span class="uk-label">Research</span> -->
+                            IR-RGB Registration and Optical Flow
+                        </div>
+                        <div> <u>Xinhang Liu</u>, <a href="https://levenberg.github.io">Huai Yu</a>, and <a href="https://theairlab.org">Sebastian Scherer</a> </div>
+                        <b><i> CMU RISS 2021 (On-going)</i></b>
+                        <div> In this work we developed a multi-modal optical flow estimation framework, 
+                            different from traditional methods based on feature point extraction and matching. 
+                            We designed a network architecture which combines unsupervised flow estimation with 
+                            multimodal image-to-image translation to tackle this task.</div>
+                            
+                        <a href="https://drive.google.com/file/d/1saht8lDWcKPJrnwxlqs_T2IwsfU_MgVC/view?usp=sharing" class="uk-button uk-button-text">[RISS Journal Paper]</a>
+                        <a href="https://drive.google.com/file/d/1wEf0hdlFYAakfz7OwEkeEM3eEhUyp6dH/view?usp=sharing" class="uk-button uk-button-text">[Video]</a>
+                        <a href="https://drive.google.com/file/d/1jdcXX86B8YKD0nO5jRWDboWrkPJK90Qa/view?usp=sharing" class="uk-button uk-button-text">[Poster]</a>
+                    </li>
+                </ul>
+                <img src="images/results.pdf" style="width: 70%;display:block;margin-left: auto;margin-right: auto;">
+            </li>
+
+
+
+
+            </ul>
+            </li>
+            </ul>
+
+
+            <p id="contact" class="uk-h2 uk-text-bold">Contact</p>
+            <div class="uk-child-width-1-2@m" uk-grid>
+                <div class="uk-width-large">
+                    <div class="uk-card uk-card-default uk-card-hover uk-card-body">
+                        <h3 class="uk-card-title">Address</h3>
+                        <p>
+                            393 Middle Huaxia Road <br/>
+                            Pudong, Shanghai  <br/>
+                            P.R. China <br/>
+                            201210
+                        </p>
+                        <p> </p>
+                        <p> </p>
+                    </div>
+                </div>
+                <div class="uk-width-large">
+                    <div class="uk-card uk-card-primary uk-card-hover uk-card-body"  style="background-color: #3d95e7">
+                        <h3 class="uk-card-title">Email</h3>
+                        <p>
+                            <b>Academic</b> <br/>
+                            liuxh2 [at] shanghaitech.edu.cn
+                        </p>
+                        <p>
+                            <b>Other Use</b> <br/>
+                            1033210669 [at] qq.com
+                        </p>
+                    </div>
+                </div>
+            </div>
+
+            <p id="bio", class="uk-h2 uk-text-bold">About Me</p>
+            <article class="uk-article">
+                <blockquote cite="#">
+                    <p class="uk-margin-small-bottom">Wonder. Go on and wonder.</p>
+                    <footer><cite>William Faulkner, The Sound and the Fury</cite></footer>
+                </blockquote>
+                <p>
+                    I was born and raised up in Nanjing, which used to be the capital of ancient China in six dynasties. 
+                    When I was in high school, my passion was in Physics.
+                    Then I attended a young and beautiful university - <a href="https://www.youtube.com/watch?v=KnUbDySSwaA" target="_blank">ShanghaiTech University</a> in <a href="https://www.youtube.com/watch?v=jwr5pAuVDZY" target="_blank">Shanghai</a>, eastern China 
+                    and started my adventure in Computer Science, which is also a thriving field. 
+                </p>
+                <p>
+                    During my undergraduate studies, 
+                    what I did best was probably to get high scores in exams.
+                    I enjoy doing research, especially the awakening after thinking, precipitation and discussion.
+                </p>
+                <p>
+                    I am a big fan of basketball. I am a starting forward of ShanghaiTech's basketball team. 
+                    I hope that before I graduate, our team can enter the quarterfinals of Shanghai University Basketball Championship.
+                </p>
+            </article>
+        </div>
+        </div>
+
+
+        <!-- Visitor recorder -->
+        <img src='http://www.wjjsoft.com/cgi-bin/_count_wph.cgi?q=profile' width=1 style='visibility: hidden' />
+
+        <!-- Footer -->
+        <div class="uk-section uk-flex uk-flex-center uk-section-secondary uk-height-small" style="background-color: #3d95e7">
+            <div class="uk-container uk-container-large uk-text-primary">
+                <p class="uk-text-small uk-text-center">Copyright &copy; 2021 Xinhang Liu. All Rights Reserved.</p>
+                <p class="uk-text-small uk-text-center">Powered by <span uk-icon="uikit">UIkit</span></p>
+            </div>
+        </div>
+
+    </body>
+</html>
