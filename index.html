@@ -1,0 +1,269 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Xinhang's Homepage</title>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+
+        <!-- UIkit CSS -->
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/uikit@3.3.1/dist/css/uikit.min.css" />
+
+        <!-- UIkit JS -->
+        <script src="https://cdn.jsdelivr.net/npm/uikit@3.3.1/dist/js/uikit.min.js"></script>
+        <script src="https://cdn.jsdelivr.net/npm/uikit@3.3.1/dist/js/uikit-icons.min.js"></script>
+
+        <style>
+            .uk-label{
+                color: black;
+                text-transform: none;
+                background-color: transparent;
+                border: 1px solid black;
+                padding: 0px 3px;
+            }
+        </style>
+    </head>
+    <body>
+        <nav class="uk-navbar-container uk-margin uk-light" style="background-color: #3d95e7" uk-navbar>
+            <div class="uk-navbar-left">
+                <a class="uk-navbar-item uk-logo uk-text-primary" href="index.html">Xinhang's Homepage</a>
+            </div>
+            <div class="uk-navbar-right">
+                <ul class="uk-navbar-nav">
+                    <li class="uk-active uk-visible@m"> <a href="index.html"> Home </a> </li>
+                    <li class="uk-active uk-visible@m"> <a href="index.html#research"> Projects </a> </li>
+                    <li class="uk-active uk-visible@m"> <a href="index.html#contact"> Contact </a> </li>
+                    <li class="uk-active uk-visible@m"> <a href="index.html#bio"> About </a> </li>
+                    <a class="uk-active uk-navbar-toggle uk-hidden@m" uk-navbar-toggle-icon href="#offcanvas-nav-primary" uk-toggle></a>
+                </ul>
+            </div>
+        </nav>
+
+        <div id="offcanvas-nav-primary" uk-offcanvas="overlay: true">
+            <div class="uk-offcanvas-bar uk-flex uk-flex-column">
+                <ul class="uk-nav uk-nav-primary uk-nav-center uk-margin-auto-vertical">
+                    <li class="uk-active"> <a href="index.html"> Home </a> </li>
+                    <li class="uk-active"> <a href="index.html#research"> Projects </a> </li>
+                    <li class="uk-active"> <a href="index.html#contact"> Contact </a> </li>
+                    <li class="uk-active"> <a href="index.html#bio"> About </a> </li>
+                </ul>
+            </div>
+        </div>
+
+        <!-- Header -->
+        <!-- <div class="uk-section uk-flex uk-flex-center uk-section-secondary uk-light"> -->
+        <div class="uk-flex uk-flex-center">
+            <div class="uk-container uk-width-1-1 uk-width-3-4@m uk-padding-small" uk-grid>
+            <!-- <div class="uk-container uk-container-large uk-flex-middle uk-padding-small" uk-grid> -->
+                <a class="uk-flex uk-flex-center uk-width-1-1 uk-width-auto@m uk-margin-top" href="#">
+                    <div class="uk-width-1-1 uk-width-medium@s uk-visible@l">
+                        <img class="uk-responsive-height uk-responsive-width" src="images/photo_dorm.png" alt="Portrait" />
+                    </div>
+                </a>
+                <div class="uk-width-expand uk-margin-remove">
+                    <p class="uk-h1 uk-text-center uk-text-left@m uk-width-expand@m uk-margin-remove">
+                        Xinhang Liu
+                    </p>
+                    <p>
+                        I am a rising senior at <a href="http://sist.shanghaitech.edu.cn">SIST</a> of <a href="https://www.shanghaitech.edu.cn/eng/">ShanghaiTech University</a>. 
+                        I am studying and doing scientific research in the areas of deep learning, computer vision, and computational photography, under the supervision of 
+                        <a href="http://vic.shanghaitech.edu.cn/vrvc/en/people/">Prof. Jingyi Yu</a> at the <a href="http://vic.shanghaitech.edu.cn/vrvc/en/">VRVC Center</a>.
+                        During the summer of 2021, I also worked remotely with <a href="https://theairlab.org/team/sebastian/">Prof. Sebastian Scherer</a> at the <a href="https://theairlab.org">AirLab</a>, 
+                        thourgh <a href="https://riss.ri.cmu.edu">RISS</a> program.
+                        My ongoing research topics are <a href="#nr">neural representation</a> and <a href="#irrgb">IR-RGB registration</a>.
+                    </p>
+                    <!-- Buttons for desktop device -->
+                    <div class="uk-margin-horizontal uk-visible@m">
+                        <a href="#contact" class="uk-button uk-button-default uk-margin-small-right" uk-icon="mail"> Mail </a>
+                        <a href="https://github.com/DarlingHang" class="uk-button uk-button-default uk-margin-small-right" uk-icon="github"> GitHub </a>
+                        <a href="https://www.linkedin.com/in/xinhang-l-a36913205/" class="uk-button uk-button-default uk-margin-small-right" uk-icon="linkedin"> LinkedIn </a>
+                    </div>
+                    <!-- Buttons for mobile device -->
+                    <div class="uk-margin-horizontal uk-flex uk-flex-center uk-hidden@m">
+                        <a href="#contact" class="uk-button uk-button-default uk-margin-small-right" uk-icon="mail"></a>
+                        <a href="https://github.com/DarlingHang" class="uk-button uk-button-default uk-margin-small-right" uk-icon="github"></a>
+                        <a href="https://www.linkedin.com/in/xinhang-l-a36913205/" class="uk-button uk-button-default uk-margin-small-right" uk-icon="linkedin"></a>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Body -->
+        <div class="uk-flex uk-flex-center uk-margin-remove-top uk-margin-medium-bottom">
+        <div class="uk-container uk-width-1-1 uk-width-3-4@m uk-padding-small">
+            <p id="research" class="uk-h2 uk-text-bold">Research</p>
+            <ul class="uk-list uk-list-divider">
+            <li>
+                <div id="gcns" class="uk-text-lead uk-text-bold">Graph Representation Learning</div>
+                <p>
+                    Graph Neural Networks (GNNs) and Graph Convolutional Networks (GCNs) generalize the power of CNN to learn on graph-structured data (e.g., citation networks, molecules/proteins, 3D meshes). However, existing GNNs cannot be trained deeply and has a limited application range. Our research line includes both theoretical analysis of GNNs and exploration for their potential applications:
+                </p>
+                <ul class="uk-list uk-margin-small-bottom">
+                    <li>
+                        <div class="uk-text-lead">
+                            <!-- <span class="uk-label">Research</span> -->
+                            SoGCN: Second-Order Graph Convolutional Networks
+                            <img src="https://img.shields.io/github/stars/yuehaowang/SoGCN?style=social&logo=github"><img/>
+                        </div>
+                        <div> <u>Peihao Wang</u>*, <a href="http://yuehaolab.com/">Yuehao Wang</a>*, <a href="http://linhuavvv.com/">Hua Lin</a>, <a href="https://www.cis.upenn.edu/~jshi/">Jianbo Shi</a> </div>
+                        <i> Submitted to ICML 2021 </i>
+                        <div> We prove that second-order graph convolution is the maximally localized kernel with full representation power. </div>
+                        <a href="archive/Wang_SoGCN_ICML_2021_preprint.pdf" target="_blank" class="uk-button uk-button-text">[Paper]</a>
+                        <a href="archive/Wang_SoGCN_ICML_2021_supp.pdf" target="_blank" class="uk-button uk-button-text">[Supp]</a>
+                        <a href="archive/Wang_SoGCN_2020_slides.pdf" target="_blank" class="uk-button uk-button-text">[Slides]</a>
+                        <a href="https://github.com/yuehaowang/SoGCN" target="_blank" class="uk-button uk-button-text">[Code]</a>
+                    </li>
+                </ul>
+            </li>
+            <li>
+                <div id="nr" class="uk-text-lead uk-text-bold">Neural Representation and Optimization</div>
+                <p>
+                    An emerging perspective towards neural networks is to treat them as universal approximators of arbitrary continuous functions. One can solve many inverse problems by: 1) representing the objective function as a multi-layer perceptron, 2) writing a differentiable forward process, and 3) adopting gradient-based algorithms to reach the optimum. In particular, we are using neural representation framework to solve inter-disciplinary challenges in physical imaging, medical imaging, and biological microscopy:
+                </p>
+                <ul class="uk-list uk-margin-small-bottom">
+                    <li>
+                        <div class="uk-text-lead">
+                            <!-- <span class="uk-label">Research</span> -->
+                            Neural Implicit Function for Cryo-EM Reconstruction
+                        </div>
+                        <div> <u>Peihao Wang</u>, <a href="https://jiakai-zhang.github.io/">Jiakai Zhang</a>, <a href="http://vic.shanghaitech.edu.cn/vrvc/en/people/">Jingyi Yu</a> </div>
+                        <div> An end-to-end differentiable neural representation and optimization framework for <a href="https://en.wikipedia.org/wiki/Cryogenic_electron_microscopy" target="_blank">cryo-microscopy</a> reconstruction. </div>
+                        <a href="archive/Wang_CryoEM_NeRF_2020_slides.pdf" target="_blank" class="uk-button uk-button-text">[Slides]</a>
+                        <a href="" class="uk-button uk-button-text">[Code]</a>
+                        <a href="" class="uk-button uk-button-text">[Dataset]</a>
+
+                    </li>
+                </ul>
+            </li>
+
+            <li>
+                <div id="irrgb" class="uk-text-lead uk-text-bold">3D Human Avatar Digitalization</div>
+                <p>
+                    Human avatars are one of the most important elements in virtual reality. Our research line includes 3D human body reconstruction, 3D human clothing reconstruction/simulation, 3D pose estimation, human motion capture, and action understanding:
+                </p>
+                <ul class="uk-list uk-margin-small-bottom">
+                <li>
+                    <div class="uk-text-lead">
+                        Towards Competitive Diving Video Understanding
+                    </div>
+                    <div> <a href="https://chenxin.tech/">Xin Chen</a>, Anqi Pang, <a href="https://scholar.google.com/citations?user=fRjxdPgAAAAJ"> Wei Yang </a>, <u>Peihao Wang</u>, <a href="https://dzhange.github.io/">Ge Zhang</a>, <a href="https://xmhe.bitbucket.io/">Xuming He</a>, <a href="http://vic.shanghaitech.edu.cn/vrvc/en/people/">Jingyi Yu</a> </div>
+                    <i> Submitted to ECCV 2020 </i>
+                    <div> Competitive diving video understanding by identifying the dive number, assessing the performance, 2D pose/action recovery. </div>
+                    <a href="archive/Chen_Towards_Competitive_Diving_Video_Understanding_preprint.pdf" target="_blank" class="uk-button uk-button-text">[Paper]</a>
+                    <a href="archive/Chen_Towards_Competitive_Diving_Video_Understanding_video.mp4" target="_blank" class="uk-button uk-button-text">[Video]</a>
+                    <a href="https://chenxin.tech/files/Paper/IJCV2020_Sport/201016_SportsCap_IJCV2020.pdf" target="_blank" class="uk-button uk-button-text">[Revision]</a>
+                </li>
+
+                <li>
+                    <div class="uk-text-lead">
+                        3D Clothing Segmentation via Graph Convolutional Networks
+                        <img src="https://img.shields.io/github/stars/peihaowang/GCN3DSegment?style=social&logo=github"><img/>
+                    </div>
+                    <div> <u>Peihao Wang</u>, <a href="https://chenxin.tech/">Xin Chen</a>, <a href="http://vic.shanghaitech.edu.cn/vrvc/en/people/">Jingyi Yu</a> </div>
+                    <div> Garment segmentation networks based on graph convolutional networks for human models. </div>
+                    <!-- <a href="https://github.com/peihaowang/GCN3DSegment" target="_blank" class="uk-button uk-button-text">[Details]</a> -->
+                    <a href="archive/Wang_GCN_Segmentation_2019_slides.pdf" target="_blank" class="uk-button uk-button-text">[Slides]</a>
+                    <a href="https://github.com/peihaowang/GCN3DSegment" target="_blank" class="uk-button uk-button-text">[Code]</a>
+                    <a href="https://chenxin.tech/files/Paper/Arxiv2019_Fitness/TightCap.html" target="_blank" class="uk-button uk-button-text">[Dataset]</a>
+                </li>
+
+                <li>
+                    <div class="uk-text-lead">
+                        Towards 3D Human Shape Recovery Under Clothing
+                    </div>
+                    <div> <a href="https://chenxin.tech/">Xin Chen</a>, Anqi Pang, Yu Zhu, <a href="https://liyuwei.cc/">Yuwei Li</a>, <a href="https://www.luoxi.tech/">Xi Luo</a>, <a href="https://dzhange.github.io/">Ge Zhang</a>, <u>Peihao Wang</u>, <a href="https://scholar.google.com/citations?user=dnjU2RMAAAAJ">Yingliang Zhang</a>, <a href="https://sist.shanghaitech.edu.cn/sist_en/2020/0814/c7585a54898/page.htm">Shiying Li</a>, <a href="http://vic.shanghaitech.edu.cn/vrvc/en/people/">Jingyi Yu</a> </div>
+                    <i> Submitted to ICCV 2019 </i>
+                    <div> A learning-based scheme for robustly and accurately estimating clothing fitness as well as the human shape on clothed 3D human scans. </div>
+                    <a href="https://arxiv.org/pdf/1904.02601v1.pdf" target="_blank" class="uk-button uk-button-text">[Paper]</a>
+                    <a href="https://chenxin.tech/files/Paper/Arxiv2019_Fitness/TightCap_arxiv2020_video.mp4" target="_blank" class="uk-button uk-button-text">[Video]</a>
+                    <a href="https://chenxin.tech/files/Paper/Arxiv2019_Fitness/TightCap.html" target="_blank" class="uk-button uk-button-text">[Dataset]</a>
+                    <a href="https://arxiv.org/pdf/1904.02601.pdf" target="_blank" class="uk-button uk-button-text">[Revision]</a>
+                </li>
+            </ul>
+            </li>
+            </ul>
+
+            <p class="uk-h2 uk-text-bold">Teaching</p>
+            <ul class="uk-list uk-list-bullet">
+                <li>
+                    SI363 - Multi-Scale Imaging for Structural Biology (Spring, 2021): Teaching assistant.
+                    <!-- <div class='uk-text-small'>With the help of Prof. Xuming He and Prof. Jingyi Yu, we can open this course at the first time to provide background knowledge for machine learning and computer vision folks to boarden their impact into the field of structural biology and microscopy.</div> -->
+                </li>
+                <li>
+                    CS276 - Computational Photography (Fall, 2020): Guest lecture in <i>"<a href="https://drive.google.com/file/d/16DvMGw8QHOJxsJ0bcUt05DZK0fesry_W/view?usp=sharing" target="_blank">Camera and Lens</a>"</i>.
+                </li>
+                <li>
+                    <a href="http://utechacademy.cn/" target="_blank">UTech Academy AI Camp</a> (Aug, 2020): Teaching assistant of computer vision track.
+                </li>
+                <li>
+                    <a href="https://robotics.shanghaitech.edu.cn/courses/ca/20s/" target="_blank">CS110 - Computer Architecture</a> (Spring, 2020): Teaching assistant.
+                </li>
+                <li>
+                    CS100 - Introduction to Programming (Fall, 2019): Teaching assistant.
+                </li>
+            </ul>
+
+            <p id="contact" class="uk-h2 uk-text-bold">Contact</p>
+            <div class="uk-child-width-1-2@m" uk-grid>
+                <div class="uk-width-large">
+                    <div class="uk-card uk-card-default uk-card-hover uk-card-body">
+                        <h3 class="uk-card-title">Address</h3>
+                        <p>
+                            393 Middle Huaxia Road <br/>
+                            Pudong, Shanghai  <br/>
+                            P.R. China <br/>
+                            201210
+                        </p>
+                        <p> </p>
+                        <p> </p>
+                    </div>
+                </div>
+                <div class="uk-width-large">
+                    <div class="uk-card uk-card-primary uk-card-hover uk-card-body"  style="background-color: #3d95e7">
+                        <h3 class="uk-card-title">Email</h3>
+                        <p>
+                            <b>Academic</b> <br/>
+                            liuxh2 [at] shanghaitech.edu.cn
+                        </p>
+                        <p>
+                            <b>Other Use</b> <br/>
+                            1033210669 [at] qq.com
+                        </p>
+                    </div>
+                </div>
+            </div>
+
+            <p id="bio", class="uk-h2 uk-text-bold">About Me</p>
+            <article class="uk-article">
+                <blockquote cite="#">
+                    <p class="uk-margin-small-bottom">Keep thy heart with all diligence; for out of it are the issues of life.</p>
+                    <footer><cite>Proverbs 4:23, KJV</cite></footer>
+                </blockquote>
+                <p>
+                    I was born and raised up in <a href="https://www.youtube.com/watch?v=h5eb8zMd8Qg" target="_blank">Chengdu</a>, southwestern China, together with my <a href="http://yuehaolab.com/">twin brother</a>.
+                    I learned C/C++ programming languages at 12 years old, and spent my leisure time developing <a href="http://www.wjjsoft.com/mybase.html">myBase Desktop 7</a> during high school.
+                </p>
+                <p>
+                    I attended a young and thriving university - <a href="https://www.youtube.com/watch?v=KnUbDySSwaA" target="_blank">ShanghaiTech University</a> in <a href="https://www.youtube.com/watch?v=jwr5pAuVDZY" target="_blank">Shanghai</a>, eastern China. I'm now in the Austin, southern United States to pursue my PhD degree with a focus on machine learning and computer vision.
+                </p>
+                <p>
+                    I enjoy doing research, reading insightful papers, and writing computer programs. I believe good work should deliver either mathematical motivations or extensive engineering efforts.
+                    I am also a <a href="https://en.wikipedia.org/wiki/Hackathon">Hackthathon</a> player and took part in lots of innovation and design-sprint events.
+                </p>
+            </article>
+        </div>
+        </div>
+
+
+        <!-- Visitor recorder -->
+        <img src='http://www.wjjsoft.com/cgi-bin/_count_wph.cgi?q=profile' width=1 style='visibility: hidden' />
+
+        <!-- Footer -->
+        <div class="uk-section uk-flex uk-flex-center uk-section-secondary uk-height-small" style="background-color: #3d95e7">
+            <div class="uk-container uk-container-large uk-text-primary">
+                <p class="uk-text-small uk-text-center">Copyright &copy; 2021 Peihao Wang. All Rights Reserved.</p>
+                <p class="uk-text-small uk-text-center">Powered by <span uk-icon="uikit">UIkit</span></p>
+            </div>
+        </div>
+
+    </body>
+</html>
