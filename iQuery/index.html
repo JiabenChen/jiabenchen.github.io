@@ -1,0 +1,200 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <meta name="description"
+        content="iQuery: Instruments As Queries for Audio-Visual Sound Separation">
+  <meta name="keywords" content="iQuery, audio-visual sound source separation">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>iQuery: Instruments As Queries for Audio-Visual Sound Separation</title>
+
+  <script>
+    window.dataLayer = window.dataLayer || [];
+
+    function gtag() {
+      dataLayer.push(arguments);
+    }
+
+    gtag('js', new Date());
+
+    gtag('config', 'G-PYVRSFMDRL');
+  </script>
+
+  <link href="https://fonts.googleapis.com/css?family=Google+Sans|Noto+Sans|Castoro"
+        rel="stylesheet">
+
+  <link rel="stylesheet" href="./static/css/bulma.min.css">
+  <link rel="stylesheet" href="./static/css/bulma-carousel.min.css">
+  <link rel="stylesheet" href="./static/css/bulma-slider.min.css">
+  <link rel="stylesheet" href="./static/css/fontawesome.all.min.css">
+  <link rel="stylesheet"
+        href="https://cdn.jsdelivr.net/gh/jpswalsh/academicons@1/css/academicons.min.css">
+  <link rel="stylesheet" href="./static/css/index.css">
+  <link rel="icon" href="./static/images/favicon.svg">
+
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <script defer src="./static/js/fontawesome.all.min.js"></script>
+  <script src="./static/js/bulma-carousel.min.js"></script>
+  <script src="./static/js/bulma-slider.min.js"></script>
+  <script src="./static/js/index.js"></script>
+</head>
+<body>
+
+<section class="hero">
+  <div class="hero-body">
+    <div class="container is-max-desktop">
+      <div class="columns is-centered">
+        <div class="column has-text-centered">
+          <h1 class="title is-1 publication-title">iQuery: Instruments As Queries for Audio-Visual Sound Separation</h1>
+          <div class="is-size-5 publication-authors">
+            <span class="author-block">
+              <a href="https://jiabenchen.github.io">Jiaben Chen</a><sup>1</sup>,</span>
+            <span class="author-block">
+              <a href="https://github.com/ZrrSkywalker">Renrui Zhang</a><sup>2</sup>,</span>
+            <span class="author-block">
+              <a href="https://dongzelian.com">Dongze Lian</a><sup>3</sup>,
+            </span>
+            <span class="author-block">
+              <a href="https://github.com/greatoyster">Jiaqi Yang</a><sup>4</sup>,
+            </span>
+            <span class="author-block">
+              <a href="https://adonis-galaxy.github.io/homepage/">Ziyao Zeng</a><sup>4</sup>,
+            </span>
+            <span class="author-block">
+              <a href="https://www.cis.upenn.edu/~jshi/">Jianbo Shi</a><sup>5</sup>,
+            </span>
+          </div>
+
+          <div class="is-size-5 publication-authors">
+            <span class="author-block"><sup>1</sup>UC San Diego,</span>
+            <span class="author-block"><sup>2</sup>CUHK MMLab,</span>
+            <span class="author-block"><sup>3</sup>National University of Singapore,</span>
+            <span class="author-block"><sup>4</sup>ShanghaiTech University,</span>
+            <span class="author-block"><sup>5</sup>University of Pennsylvania</span>
+          </div>
+
+          <div class="column has-text-centered">
+            <div class="publication-links">
+              <!-- PDF Link. -->
+              <span class="link-block">
+                <a href="https://openaccess.thecvf.com/content/CVPR2023/papers/Chen_iQuery_Instruments_As_Queries_for_Audio-Visual_Sound_Separation_CVPR_2023_paper.pdf"
+                   class="external-link button is-normal is-rounded is-dark">
+                  <span class="icon">
+                      <i class="fas fa-file-pdf"></i>
+                  </span>
+                  <span>Paper</span>
+                </a>
+              </span>
+              <span class="link-block">
+                <a href="https://arxiv.org/abs/2212.03814"
+                   class="external-link button is-normal is-rounded is-dark">
+                  <span class="icon">
+                      <i class="ai ai-arxiv"></i>
+                  </span>
+                  <span>arXiv</span>
+                </a>
+              </span>
+              <!-- Video Link. -->
+              <span class="link-block">
+                <a href="https://www.youtube.com/watch?v=MrKrnHhk8IA"
+                   class="external-link button is-normal is-rounded is-dark">
+                  <span class="icon">
+                      <i class="fab fa-youtube"></i>
+                  </span>
+                  <span>Video</span>
+                </a>
+              </span>
+              <!-- Code Link. -->
+              <span class="link-block">
+                <a href="https://github.com/JiabenChen/iQuery"
+                   class="external-link button is-normal is-rounded is-dark">
+                  <span class="icon">
+                      <i class="fab fa-github"></i>
+                  </span>
+                  <span>Code</span>
+                  </a>
+            </div>
+
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="section">
+  <div class="container is-max-desktop">
+    <!-- Abstract. -->
+    <div class="columns is-centered has-text-centered">
+      <div class="column is-four-fifths">
+        <h2 class="title is-3">Abstract</h2>
+        <div class="content has-text-justified">
+          <p>
+            Current audio-visual separation methods share a standard architecture design where an audio encoder-decoder network is fused
+            with visual encoding features at the encoder bottleneck. 
+            This design confounds the learning of multi-modal feature encoding with robust sound decoding for audio separation. 
+            To generalize to a new instrument, one must fine-tune the entire visual and audio network for all musical instruments.
+          </p>
+          <p>
+            We re-formulate the visual-sound separation task and propose Instruments as Queries (iQuery) with a flexible query expansion mechanism. 
+            Our approach ensures cross-modal consistency and cross-instrument disentanglement. 
+            We utilize “visually named” queries to initiate the learning of audio queries and use cross-modal attention to 
+            remove potential sound source interference at the estimated waveforms. 
+            To generalize to a new instrument or event class, drawing inspiration from the text-prompt design, 
+            we insert additional queries as audio prompts while freezing the attention mechanism.
+          </p>
+          <p>
+            Experimental results on three benchmarks demonstrate that our iQuery improves audio-visual sound source separation performance.
+          </p>
+        </div>
+      </div>
+    </div>
+    <!--/ Abstract. -->
+
+    <!-- Paper video. -->
+    <!--/ Paper video. -->
+  </div>
+</section>
+
+
+<section class="section" id="BibTeX">
+  <div class="container is-max-desktop content">
+    <h2 class="title">BibTeX</h2>
+    <pre><code>@InProceedings{Chen_2023_CVPR,
+    author    = {Chen, Jiaben and Zhang, Renrui and Lian, Dongze and Yang, Jiaqi and Zeng, Ziyao and Shi, Jianbo},
+    title     = {iQuery: Instruments As Queries for Audio-Visual Sound Separation},
+    booktitle = {Proceedings of the IEEE/CVF Conference on Computer Vision and Pattern Recognition (CVPR)},
+    month     = {June},
+    year      = {2023},
+    pages     = {14675-14686}
+}</code></pre>
+  </div>
+</section>
+
+
+<footer class="footer">
+  <div class="container">
+    <div class="content has-text-centered">
+      <a class="icon-link"
+         href="https://arxiv.org/pdf/2212.03814.pdf">
+        <i class="fas fa-file-pdf"></i>
+      </a>
+      <a class="icon-link" href="https://github.com/JiabenChen" class="external-link" disabled>
+        <i class="fab fa-github"></i>
+      </a>
+    </div>
+    <div class="columns is-centered">
+      <div class="column is-8">
+        <div class="content">
+          <p>
+            Design and source code modified based on website of <a
+            href="https://github.com/nerfies/nerfies.github.io">Nerfies</a>.
+          </p>
+        </div>
+      </div>
+    </div>
+  </div>
+</footer>
+
+</body>
+</html>
