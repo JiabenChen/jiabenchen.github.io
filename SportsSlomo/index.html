@@ -132,15 +132,14 @@
         <h2 class="title is-3">Abstract</h2>
         <div class="content has-text-justified">
           <p>
-            Human-centric video frame interpolation has great potential for improving people's entertainment experiences and finding commercial applications in the sports analysis industry, \eg, synthesizing slow-motion videos.
+            Human-centric video frame interpolation has great potential for improving people's entertainment experiences and finding commercial applications in the sports analysis industry, e.g., synthesizing slow-motion videos.
 Although there are multiple benchmark datasets available in the community, none of them is dedicated for human-centric scenarios.
-To bridge this gap, we introduce \textbf{SportsSloMo}, a benchmark consisting of more than 130K video clips and 1M video frames of high-resolution ($\geq$720p) slow-motion sports videos crawled from YouTube.
+To bridge this gap, we introduce <strong>SportsSloMo</strong>, a benchmark consisting of more than 130K video clips and 1M video frames of high-resolution (≥720p) slow-motion sports videos crawled from YouTube.
 We re-train several state-of-the-art methods on our benchmark, and the results show a decrease in their accuracy compared to other datasets. 
-It  highlights the difficulty of our benchmark and suggests that it poses significant challenges even for the best-performing methods, as human bodies are highly deformable and occlusions are frequent in sports videos.
-To improve the accuracy, we introduce three loss terms considering the human-aware priors, where we add auxiliary supervision to optical flow, panoptic segmentation, and human keypoints detection, respectively.
+It highlights the difficulty of our benchmark and suggests that it poses significant challenges even for the best-performing methods, as human bodies are highly deformable and occlusions are frequent in sports videos.
+To improve the accuracy, we introduce two loss terms considering the human-aware priors, where we add auxiliary supervision to panoptic segmentation and human keypoints detection, respectively.
 The loss terms are model agnostic and can be easily plugged into any flow-based video frame interpolation approaches.
 Experimental results validate the effectiveness of our proposed loss terms, leading to strong baseline models on our benchmark.
-The dataset and code of the baseline models will be released to the entire community to foster research in the direction of human-centric video frame interpolation.
           </p>
         </div>
       </div>
