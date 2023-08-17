@@ -96,7 +96,7 @@
               </span>
               <!-- Code Link. -->
               <span class="link-block">
-                <a href="https://github.com/JiabenChen/iQuery"
+                <a href="https://github.com/JiabenChen/SportsSloMo"
                    class="external-link button is-normal is-rounded is-dark">
                   <span class="icon">
                       <i class="fab fa-github"></i>
@@ -106,7 +106,7 @@
               </span>
               <!-- Dataset Link. -->
               <span class="link-block">
-                <a href="https://github.com/JiabenChen/iQuery"
+                <a href="https://github.com/JiabenChen/SportsSloMo"
                   class="external-link button is-normal is-rounded is-dark">
                   <span class="icon">
                       <i class="far fa-images"></i>
@@ -122,6 +122,77 @@
     </div>
   </div>
 </section>
+
+<section class="section">
+    <div class="container is-max-desktop">
+      <!-- Abstract. -->
+      <div class="columns is-centered has-text-centered">
+        <div class="column is-four-fifths">
+          <h2 class="title is-3">Abstract</h2>
+          <div class="content has-text-justified">
+            <p>
+              Human-centric video frame interpolation has great potential for improving people's entertainment experiences and finding commercial applications in the sports analysis industry, e.g., synthesizing slow-motion videos.
+  Although there are multiple benchmark datasets available in the community, none of them is dedicated for human-centric scenarios.
+  To bridge this gap, we introduce <strong>SportsSloMo</strong>, a benchmark consisting of more than 130K video clips and 1M video frames of high-resolution (≥720p) slow-motion sports videos crawled from YouTube.
+  We re-train several state-of-the-art methods on our benchmark, and the results show a decrease in their accuracy compared to other datasets. 
+  It highlights the difficulty of our benchmark and suggests that it poses significant challenges even for the best-performing methods, as human bodies are highly deformable and occlusions are frequent in sports videos.
+  To improve the accuracy, we introduce two loss terms considering the human-aware priors, where we add auxiliary supervision to panoptic segmentation and human keypoints detection, respectively.
+  The loss terms are model agnostic and can be easily plugged into any flow-based video frame interpolation approaches.
+  Experimental results validate the effectiveness of our proposed loss terms, leading to strong baseline models on our benchmark.
+            </p>
+          </div>
+        </div>
+      </div>
+      <!--/ Abstract. -->
+  </div>
+  </section>
+
+  <section class="section">
+    <div class="container is-max-desktop">
+        <!-- Dataset Introduction. -->
+        <div class="columns is-centered">
+            <div class="column is-full">
+                <h2 class="title is-3">SportsSloMo Benchmark</h2>
+                <div class="content has-text-justified">
+                    <p>
+                        Although various benchmarks are available for video frame interpolation, none of them is dedicated to human-centric scenarios.
+                        To bridge this gap and to foster the research in this important direction, we create a new dataset, <strong>SportsSloMo</strong>, focusing on high-resolution (&ge;720p) slow-motion sports videos crawled from YouTube under the Common Creative Licence.
+                        In total, our benchmark has 130K video clips and more than 1M video frames.
+                        Compared with other existing datasets, our proposed SportsSloMo benchmark is the largest one so far, with high resolution and focus on human-centric scenarios.
+                    </p>
+                </div>
+            </div>
+        </div>
+        <!-- End of Dataset Introduction. -->
+
+        <div class="columns is-centered">
+            <!--Flow Magnitude Distribution -->
+            <div class="column">
+                <div class="content">
+                    <h2 class="title is-4">Flow Magnitude Distribution</h2>
+                    <p>
+                        As is shown by the histogram of flow magnitude, our proposed <i>SportsSloMo</i> dataset contains more large-displacement motion compared with widely-used VFI datasets.
+                    </p>
+                    <img id="histogram" src="./static/images/histogram.png" alt="Histogram Image" style="width: 100%; height: auto;">
+                </div>
+            </div>
+            <!--End of Flow Magnitude Distribution -->
+
+            <!-- Sports Categories Distribution -->
+            <div class="column">
+                <div class="content">
+                    <h2 class="title is-4">Sports Categories Distribution</h2>
+                    <p>
+                        Our proposed <i>SportsSloMo</i> dataset covers 22 various sports categories with different content and motion patterns, including hockey, baseball, skating, basketball, running, volleyball, etc.
+                    </p>
+                    <img id="category" src="./static/images/category.png" alt="Category Image" style="width: 100%; height: auto;">
+                </div>
+            </div>
+            <!-- End of Sports Categories Distribution -->
+        </div>
+    </div>
+</section>
+
 
 <section class="hero is-light is-small">
   <div class="hero-body">
@@ -193,31 +264,11 @@
 </section>
 
 <section class="section">
-  <div class="container is-max-desktop">
-    <!-- Abstract. -->
-    <div class="columns is-centered has-text-centered">
-      <div class="column is-four-fifths">
-        <h2 class="title is-3">Abstract</h2>
-        <div class="content has-text-justified">
-          <p>
-            Human-centric video frame interpolation has great potential for improving people's entertainment experiences and finding commercial applications in the sports analysis industry, e.g., synthesizing slow-motion videos.
-Although there are multiple benchmark datasets available in the community, none of them is dedicated for human-centric scenarios.
-To bridge this gap, we introduce <strong>SportsSloMo</strong>, a benchmark consisting of more than 130K video clips and 1M video frames of high-resolution (≥720p) slow-motion sports videos crawled from YouTube.
-We re-train several state-of-the-art methods on our benchmark, and the results show a decrease in their accuracy compared to other datasets. 
-It highlights the difficulty of our benchmark and suggests that it poses significant challenges even for the best-performing methods, as human bodies are highly deformable and occlusions are frequent in sports videos.
-To improve the accuracy, we introduce two loss terms considering the human-aware priors, where we add auxiliary supervision to panoptic segmentation and human keypoints detection, respectively.
-The loss terms are model agnostic and can be easily plugged into any flow-based video frame interpolation approaches.
-Experimental results validate the effectiveness of our proposed loss terms, leading to strong baseline models on our benchmark.
-          </p>
-        </div>
-      </div>
-    </div>
-    <!--/ Abstract. -->
-
+    <div class="container is-max-desktop">
     <!-- Paper video. -->
     <div class="columns is-centered has-text-centered">
       <div class="column is-four-fifths">
-        <h2 class="title is-3">Video</h2>
+        <h2 class="title is-3">Overall Video</h2>
         <div class="publication-video">
           <iframe src="https://www.youtube.com/embed/FNMqoETB1sU?rel=0&amp;showinfo=0"
                   frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
