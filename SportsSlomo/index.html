@@ -23,9 +23,11 @@
   </script>
 
     <style>
-        .equal-height {
-            height: 400px;
-        }
+        .column-image {
+        max-width: 100%;
+        height: auto;
+        max-height: 400px;
+    }
     </style>
 
   <link href="https://fonts.googleapis.com/css?family=Google+Sans|Noto+Sans|Castoro"
@@ -248,7 +250,7 @@
                     <p>
                         As is shown by the histogram of flow magnitude, our proposed <i>SportsSloMo</i> dataset contains more large-displacement motion compared with widely-used VFI datasets.
                     </p>
-                    <img id="histogram" src="./static/images/histogram.png" alt="Histogram Image" class="equal-height" style="width: auto;">
+                    <img id="histogram" src="./static/images/histogram.png" alt="Histogram Image" class="column-image">
                 </div>
             </div>
             <!--End of Flow Magnitude Distribution -->
@@ -260,7 +262,7 @@
                     <p>
                         Our proposed <i>SportsSloMo</i> dataset covers 22 various sports categories with different content and motion patterns, including hockey, baseball, skating, basketball, running, volleyball, etc.
                     </p>
-                    <img id="category" src="./static/images/category.png" alt="Category Image" class="equal-height" style="width: auto;">
+                    <img id="category" src="./static/images/category.png" alt="Category Image" class="column-image">
                 </div>
             </div>
             <!-- End of Sports Categories Distribution -->
