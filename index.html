@@ -1,307 +1,299 @@
-<!DOCTYPE html>
-<html>
-    <head>
-        <title>Jiaben Chen's Homepage</title>
-        <meta charset="utf-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1">
+<!DOCTYPE HTML>
+<html lang="en">
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
 
-        <!-- UIkit CSS -->
-        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/uikit@3.3.1/dist/css/uikit.min.css" />
+    <title>Jiaben Chen</title>
 
-        <!-- UIkit JS -->
-        <script src="https://cdn.jsdelivr.net/npm/uikit@3.3.1/dist/js/uikit.min.js"></script>
-        <script src="https://cdn.jsdelivr.net/npm/uikit@3.3.1/dist/js/uikit-icons.min.js"></script>
+    <meta name="author" content="Jiaben Chen">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="shortcut icon" href="images/onepiece_logo.png" type="image/png">
+    <link rel="stylesheet" type="text/css" href="stylesheet.css">
+    
+  </head>
 
-        <style>
-            .uk-label{
-                color: black;
-                text-transform: none;
-                background-color: transparent;
-                border: 1px solid black;
-                padding: 0px 3px;
-            }
-        </style>
-    </head>
-    <body>
-        <nav class="uk-navbar-container uk-margin uk-light" style="background-color: #57aca5" uk-navbar>
-            <div class="uk-navbar-left">
-                <a class="uk-navbar-item uk-logo uk-text-primary" href="index.html">Jiaben's Homepage</a>
-            </div>
-            <div class="uk-navbar-right">
-                <ul class="uk-navbar-nav">
-                    <li class="uk-active uk-visible@m"> <a href="index.html"> Home </a> </li>
-                    <li class="uk-active uk-visible@m"> <a href="index.html#research"> Projects </a> </li>
-                    <li class="uk-active uk-visible@m"> <a href="index.html#contact"> Contact </a> </li>
-                    <li class="uk-active uk-visible@m"> <a href="index.html#bio"> About </a> </li>
-                    <a class="uk-active uk-navbar-toggle uk-hidden@m" uk-navbar-toggle-icon href="#offcanvas-nav-primary" uk-toggle></a>
-                </ul>
-            </div>
-        </nav>
-
-        <div id="offcanvas-nav-primary" uk-offcanvas="overlay: true">
-            <div class="uk-offcanvas-bar uk-flex uk-flex-column">
-                <ul class="uk-nav uk-nav-primary uk-nav-center uk-margin-auto-vertical">
-                    <li class="uk-active"> <a href="index.html"> Home </a> </li>
-                    <li class="uk-active"> <a href="index.html#research"> Projects </a> </li>
-                    <li class="uk-active"> <a href="index.html#contact"> Contact </a> </li>
-                    <li class="uk-active"> <a href="index.html#bio"> About </a> </li>
-                </ul>
-            </div>
-        </div>
-
-        <!-- Header -->
-        <!-- <div class="uk-section uk-flex uk-flex-center uk-section-secondary uk-light"> -->
-        <div class="uk-flex uk-flex-center">
-            <div class="uk-container uk-width-1-1 uk-width-3-4@m uk-padding-small" uk-grid>
-            <!-- <div class="uk-container uk-container-large uk-flex-middle uk-padding-small" uk-grid> -->
-                <a class="uk-flex uk-flex-center uk-width-1-1 uk-width-auto@m uk-margin-top" href="#">
-                    <div class="uk-width-1-1 uk-width-medium@s uk-visible@l">
-                        <img class="uk-responsive-height uk-responsive-width" src="vancouver.png" alt="Portrait" />
-                    </div>
-                </a>
-                <div class="uk-width-expand uk-margin-remove">
-                    <p class="uk-h1 uk-text-center uk-text-left@m uk-width-expand@m uk-margin-remove">
-                        Jiaben Chen
-                    </p>
-                    <p>
-                        I am an incoming second-year master student majoring in Computer Science at <a href="https://cse.ucsd.edu/">CSE</a> of <a href="https://www.ucsd.edu/">University of California, San Diego</a>, advised by <a href="https://xiaolonw.github.io">Prof. Xiaolong Wang</a>. I am currently working with <a href="https://people.csail.mit.edu/ganchuang/">Prof. Chuang Gan</a> at MIT-IBM Watson AI Lab. My research interest is computer vision, video processing and multi-modality learning.
-                        Starting from the summer of 2021, I worked with <a href="https://www.cis.upenn.edu/~jshi/">Prof. Jianbo Shi</a> at University of Pennsylvania as a research intern. I have also worked with <a href="https://jianghz.me">Prof. Huaizu Jiang</a> at Northeastern University.
-                        Before graduate study, I received my bachelor degree in Computer Science and Technology at <a href="http://sist.shanghaitech.edu.cn">SIST</a> of <a href="https://www.shanghaitech.edu.cn/eng/">ShanghaiTech University</a>, under the supervision of 
-                        <a href="https://mpl.sist.shanghaitech.edu.cn">Prof. Laurent Kneip</a> on event-based visual SLAM. During undergraduate, I have been lucky to work on video frame interpolation with <a href="https://svip-lab.github.io">Prof. Shenghua Gao</a> at ShanghaiTech in my senior year, and 
-                        I also worked as a research intern on AutoML with <a href="https://cs.rice.edu/~xh37/index.html">Prof. Xia Hu</a> at Rice university in my junior year.
-                        
-                        
-                    </p>
-                    <!-- Buttons for desktop device -->
-                    <div class="uk-margin-horizontal uk-visible@m">
-                        
-                        <a href="https://github.com/JiabenChen" class="uk-button uk-button-default uk-margin-small-right" uk-icon="github"> GitHub </a>
-                        <a href="https://www.linkedin.com/in/嘉本-陈-183598200" class="uk-button uk-button-default uk-margin-small-right" uk-icon="linkedin"> LinkedIn </a>
-                        <a href="#contact" class="uk-button uk-button-default uk-margin-small-right" uk-icon="mail"> Mail </a>
-                    </div>
-                    <!-- Buttons for mobile device -->
-                    <div class="uk-margin-horizontal uk-flex uk-flex-center uk-hidden@m">
-
-                        <a href="https://jiabenchen.github.io" class="uk-button uk-button-default uk-margin-small-right" uk-icon="github"></a>
-                        <a href="https://www.linkedin.com/in/嘉本-陈-183598200" class="uk-button uk-button-default uk-margin-small-right" uk-icon="linkedin"></a>
-                        <a href="https://scholar.google.com/citations?user=egMKh7MAAAAJ&hl=en&oi=ao" class="uk-button uk-button-default uk-margin-small-right" uk-icon="google"></a>
-                        <a href="#contact" class="uk-button uk-button-default uk-margin-small-right" uk-icon="mail"></a>
-                       
-                    </div>
-                </div>
-            </div>
-        </div>
-
-        <!-- Body -->
-        <div class="uk-flex uk-flex-center uk-margin-remove-top uk-margin-medium-bottom">
-        <div class="uk-container uk-width-1-1 uk-width-3-4@m uk-padding-small">
-            <p id="research" class="uk-h2 uk-text-bold">Research</p>
-            <ul class="uk-list uk-list-divider">
-
-            <li>
-                <ul class="uk-list uk-margin-small-bottom">
-                    <li>
-                        <div id="nr" class="uk-text-lead">
-                            <!-- <span class="uk-label">Research</span> -->
-                            SportsSloMo: A New Benchmark and Baselines for Human-centric Video Frame Interpolation
-                        </div>
-                        <div>  <u>Jiaben Chen</u>, and <a href="https://jianghz.me">Huaizu Jiang</a> </div> 
-                        <b><i> arXiv, 2023.</i></b>
-                        <div>  In this paper, we introduce SportsSloMo, a benchmark consisting of more than 130K video clips and 1M video frames of high-resolution (≥720p) slow-motion sports videos, for human-centric video frame interpolation. </div>
-                        <div> <a href="https://arxiv.org/abs/2308.16876">[Paper]</a> <a href="https://github.com/neu-vi/SportsSloMo">[Code]</a> <a href="https://neu-vi.github.io/SportsSlomo/">[Project Page]</a></div>
-                        <a class="uk-flex uk-flex-center uk-width-1-1 uk-width-auto@m uk-margin-top" href="#">
-          
-                        </a>
-                    </li>
-                </ul>
-                
-            </li>
-                
-            <li>
-                <ul class="uk-list uk-margin-small-bottom">
-                    <li>
-                        <div id="nr" class="uk-text-lead">
-                            <!-- <span class="uk-label">Research</span> -->
-                            Revisiting Event-based Video Frame Interpolation
-                        </div>
-                        <div>  <u>Jiaben Chen</u>, Yichen Zhu, Dongze Lian, Jiaqi Yang, Yifu Wang, Renrui Zhang, Xinhang Liu, Shenhan Qian, <a href="https://mpl.sist.shanghaitech.edu.cn/Director.html">Laurent Kneip</a> and <a href="https://svip-lab.github.io">Shenghua Gao</a> </div> 
-                        <b><i> IEEE/RSJ International Conference on Intelligent Robots and Systems (IROS), 2023.</i></b>
-                        <div>  In this paper, we revist event-based video frame interpolation with a proxy-guided synthesis strategy and a event-guided optical flow refinement strategy. </div>
-                        <div> <a href="https://arxiv.org/abs/2307.12558">[Paper]</a> <a href="https://jiabenchen.github.io/revisit_event">[Project Page]</a></div>
-                        <a class="uk-flex uk-flex-center uk-width-1-1 uk-width-auto@m uk-margin-top" href="#">
-          
-                        </a>
-                    </li>
-                </ul>
-                
-            </li>
-                
-            <li>
-                <ul class="uk-list uk-margin-small-bottom">
-                    <li>
-                        <div id="nr" class="uk-text-lead">
-                            <!-- <span class="uk-label">Research</span> -->
-                            iQuery: Instruments as Queries for Audio-Visual Sound Separation
-                        </div>
-                        <div>  <u>Jiaben Chen</u>, Renrui Zhang, Dongze Lian, Jiaqi Yang, Ziyao Zeng, and <a href="https://www.cis.upenn.edu/~jshi/">Jianbo Shi</a> </div>
-                        <b><i> Computer Vision and Pattern Recognition Conference (CVPR), 2023.</i></b>
-                        <div>  In this paper, we re-formulate visual-sound separation task and propose Instrument as Query (iQuery) with a flexible query expansion mechanism. </div>
-                        <div> <a href="https://arxiv.org/abs/2212.03814">[Paper]</a> <a href="https://github.com/JiabenChen/iQuery">[Code]</a> <a href="https://jiabenchen.github.io/iQuery/">[Project Page]</a></div>
-                        <a class="uk-flex uk-flex-center uk-width-1-1 uk-width-auto@m uk-margin-top" href="#">
-          
-                        </a>
-                    </li>
-                </ul>
-                
-            </li>
-                
-            <li>
-                <ul class="uk-list uk-margin-small-bottom">
-                    <li>
-                        <div id="nr" class="uk-text-lead">
-                            <!-- <span class="uk-label">Research</span> -->
-                            Unsupervised Multi-View Object Segmentation Using Radiance Field Propagation
-                        </div>
-                        <div>  Xinhang Liu, <u>Jiaben Chen</u>, Huai Yu, Yu-Wing Tai and Chi-Keung Tang </div>
-                        <b><i> Neural Information Processing Systems (NeurIPS), 2022.</i></b>
-                        <div> In this paper, we propose radiance field propagation (RFP), a novel approach to segment objects in 3D during reconstruction given only unlabeled multi-view images of a scene. </div>
-                        <div> <a href="https://xinhangliu.com/nerf_seg">[Project Page]</a> </div>
-                        <a class="uk-flex uk-flex-center uk-width-1-1 uk-width-auto@m uk-margin-top" href="#">
-          
-                        </a>
-                    </li>
-                </ul>
-                
-            </li>
-                      
-            <li>
-                <ul class="uk-list uk-margin-small-bottom">
-                    <li>
-                        <div id="nr" class="uk-text-lead">
-                            <!-- <span class="uk-label">Research</span> -->
-                            DEVO: Visual Odometry in Challenging Conditions using a Stereo Event Depth Camera
-                        </div>
-                        <div>  Yi-Fan Zuo<sup>*</sup>, Jiaqi Yang<sup>*</sup>, <u>Jiaben Chen</u>, Xia Wang, Yifu Wang and <a href="https://mpl.sist.shanghaitech.edu.cn/Director.html">Laurent Kneip</a> </div>
-                        <b><i> International Conference on Robotics and Automation (ICRA), 2022.</i></b>
-                        <div> In this paper, we proposed a novel real-time visual odometry framework for a stereo setup of a high-resolution event and depth camera to deal with challenging conditions. </div>
-                        <div> <a href="https://arxiv.org/abs/2202.02556">[Paper]</a> </div>
-                        <a class="uk-flex uk-flex-center uk-width-1-1 uk-width-auto@m uk-margin-top" href="#">
-          
-                        </a>
-                    </li>
-                </ul>
-                
-            </li>
-                
-             <li>
-                <ul class="uk-list uk-margin-small-bottom">
-                    <li>
-                        <div id="nr" class="uk-text-lead">
-                            <!-- <span class="uk-label">Research</span> -->
-                            AutoVideo: An Automated Video Action Recognition System
-                        </div>
-                        <div>  Daochen Zha<sup>*</sup>, Zaid Pervaiz Bhat<sup>*</sup>, Yi-Wei Chen<sup>*</sup>, Yicheng Wang<sup>*</sup>, Sirui Ding<sup>*</sup>, <u>Jiaben Chen</u><sup>*</sup>, Kwei-Herng Lai<sup>*</sup>, Mohammad Qazim Bhat<sup>*</sup>, Anmoll Kumar Jain, Alfredo Costilla Reyes, Na Zou and <a href="https://cs.rice.edu/~xh37/index.html">Xia Hu</a> </div>
-                        <b><i> International Joint Conference on Artificial Intelligence (IJCAI), 2022.</i></b>
-                        <div>  In this paper, we presented AutoVideo, a Python system for video action recognition based on Automated Machine Learning. </div>
-                        <div> <a href="https://arxiv.org/abs/2108.04212">[Paper]</a> <a href="https://github.com/datamllab/autovideo">[Code]</a> <a href="https://www.youtube.com/watch?v=BEInjBjeIuo">[Video]</a> </div>
-                        <a class="uk-flex uk-flex-center uk-width-1-1 uk-width-auto@m uk-margin-top" href="#">
-          
-                        </a>
-                    </li>
-                </ul>
-                
-            </li>
-                
-            <li>
-                <ul class="uk-list uk-margin-small-bottom">
-                    <li>
-                        <div id="nr" class="uk-text-lead">
-                            <!-- <span class="uk-label">Research</span> -->
-                            VECtor: A Versatile Event-Centric Benchmark for Multi-Sensor SLAM
-                        </div>
-                        <div>  Ling Gao<sup>*</sup>, Yuxuan Liang<sup>*</sup>, Jiaqi Yang<sup>*</sup>, Shaoxun Wu, Chenyu Wang, <u>Jiaben Chen</u> and <a href="https://mpl.sist.shanghaitech.edu.cn/Director.html">Laurent Kneip</a> </div>
-                        <b><i> Robotics and Automation Letters (RA-L), 2022.</i></b> <br/>
-                        <b><i> International Conference on Intelligent Robots and Systems (IROS), 2022.</i></b>
-                        <div> In this paper, we proposed the first complete multi-sensor benchmark dataset containing an event-based stereo camera, a regular stereo camera, multiple depth sensors, and an inertial measurement unit. </div>
-                        <div> <a href="https://arxiv.org/abs/2207.01404">[Paper]</a> <a href="https://star-datasets.github.io/vector/">[Benchmark]</a> </div>
-                        <a class="uk-flex uk-flex-center uk-width-1-1 uk-width-auto@m uk-margin-top" href="#">
-          
-                        </a>
-                    </li>
-                </ul>
-                
-            </li>
-                
-            </ul>
-            </li>
-            </ul>
-
-            <p id="contact" class="uk-h2 uk-text-bold">Contact</p>
-            <div class="uk-child-width-1-2@m" uk-grid>
-                <div class="uk-width-large">
-                    <div class="uk-card uk-card-default uk-card-hover uk-card-body">
-                        <h3 class="uk-card-title">Address</h3>
-                        <p>
-<!--                             1C-309, SIST Building <br/>
-                            393 Middle Huaxia Road <br/> -->
-                            9244 Regents Road <br/>
-                            La Jolla, San Diego  <br/>
-                            United States <br/>
-                            92037
-                        </p>
-                        <p> </p>
-                        <p> </p>
-                    </div>
-                </div>
-                <div class="uk-width-large">
-                    <div class="uk-card uk-card-primary uk-card-hover uk-card-body"  style="background-color: #57aca5">
-                        <h3 class="uk-card-title">Email</h3>
-                        <p>
-                            <b>Academic</b> <br/>
-                            jic088 [at] ucsd.edu <br/>
-                            chenjb1 [at] shanghaitech.edu.cn <br/>
-                        </p>
-                        <p>
-                            <b>Other Use</b> <br/>
-                            1415357040 [at] qq.com
-                        </p>
-                    </div>
-                </div>
-            </div>
-
-            <p id="bio", class="uk-h2 uk-text-bold">About Me</p>
-            <article class="uk-article">
-                <blockquote cite="#">
-                    <p class="uk-margin-small-bottom">We are all in the gutter, but some of us are looking at the stars.</p>
-                    <footer><cite>Oscar Wild</cite></footer>
-                </blockquote>
-                <p>
-                    I am a huge fan of Stephen Curry.
+  <body>
+    <table style="width:100%;max-width:800px;border:0px;border-spacing:0px;border-collapse:separate;margin-right:auto;margin-left:auto;"><tbody>
+      <tr style="padding:0px">
+        <td style="padding:0px">
+          <table style="width:100%;border:0px;border-spacing:0px;border-collapse:separate;margin-right:auto;margin-left:auto;"><tbody>
+            <tr style="padding:0px">
+              <td style="padding:2.5%;width:63%;vertical-align:middle">
+                <p class="name" style="text-align: center;">
+                  Jiaben Chen
+                </p>
+                <p>I am a second-year master student majoring in Computer Science at <a href="https://cse.ucsd.edu/">CSE</a> of <a href="https://www.ucsd.edu/">University of California, San Diego</a>. I am currently working with <a href="https://people.csail.mit.edu/ganchuang/">Prof. Chuang Gan</a> at MIT-IBM Watson AI Lab. My primary research interest lie in multi-modality learning and video synthesis.
                 </p>
                 <p>
-                    Rollin' On.
+                    During my master study, I was fortunate to be mentored by <a href="https://xiaolonw.github.io">Prof. Xiaolong Wang</a>. Starting from the summer of 2021, I worked with <a href="https://www.cis.upenn.edu/~jshi/">Prof. Jianbo Shi</a> at University of Pennsylvania as a research intern. I have also worked with <a href="https://jianghz.me">Prof. Huaizu Jiang</a> at Northeastern University. Before graduate study, I received my bachelor degree in Computer Science and Technology at <a href="http://sist.shanghaitech.edu.cn">SIST</a> of <a href="https://www.shanghaitech.edu.cn/eng/">ShanghaiTech University</a>, under the supervision of 
+                    <a href="https://mpl.sist.shanghaitech.edu.cn">Prof. Laurent Kneip</a> on event-based visual SLAM. During undergraduate, I have been lucky to work on video frame interpolation with <a href="https://svip-lab.github.io">Prof. Shenghua Gao</a> at ShanghaiTech in my senior year, and 
+                    I also worked as a research intern on AutoML with <a href="https://cs.rice.edu/~xh37/index.html">Prof. Xia Hu</a> at Rice university in my junior year.
                 </p>
-            </article>
-        </div>
-        </div>
+                <p style="text-align:center">
+                  <a href="mailto:jic088@ucsd.edu">Email</a> &nbsp;/&nbsp;
+                  <a href="https://scholar.google.com/citations?user=egMKh7MAAAAJ&hl=en&oi=ao">Google Scholar</a> &nbsp;/&nbsp;
+                  <a href="https://github.com/JiabenChen">Github</a> &nbsp;/&nbsp;
+                  <a href="https://twitter.com/JiabenC">Twitter</a> &nbsp;/&nbsp;
+                  <a href="https://www.linkedin.com/in/嘉本-陈-183598200">LinkedIn</a>
+                </p>
+              </td>
+              <td style="padding:2.5%;width:40%;max-width:40%">
+                <a href="images/JonBarron.jpg"><img style="width:100%;max-width:100%;object-fit: cover; border-radius: 50%;" alt="profile photo" src="images/boston_2023.png" class="hoverZoomLink"></a>
+              </td>
+            </tr>
+          </tbody></table>
+          <table style="width:100%;border:0px;border-spacing:0px;border-collapse:separate;margin-right:auto;margin-left:auto;"><tbody>
+              <tr>
+              <td style="padding:20px;width:100%;vertical-align:middle">
+                <h2>Publications</h2>
+                <p>
+                  <sup>*</sup> indicates equal contributions.
+                </p>
+              </td>
+            </tr>
+          </tbody></table>
+          <table style="width:100%;border:0px;border-spacing:0px;border-collapse:separate;margin-right:auto;margin-left:auto;"><tbody>
+            
+            <tr>
+                <td style="padding:20px;width:25%;vertical-align:middle">
+                  <img src="images/fig_sportsslomo.png" alt="clean-usnob" width="300" height="200">
+                </td>
+                <td width="75%" valign="middle">
+                  <a href="https://neu-vi.github.io/SportsSlomo/">
+                    <span class="papertitle">SportsSloMo: A New Benchmark and Baselines for Human-centric Video Frame Interpolation</span>
+                  </a>
+                  <br>
+                  <strong>Jiaben Chen</strong>, and <a href="https://jianghz.me">Huaizu Jiang</a>
+                  <br>
+                  <em>arXiv</em>, 2023
+                  <br>
+                  <a href="https://neu-vi.github.io/SportsSlomo/">project page</a> /
+                  <a href="https://arxiv.org/abs/2308.16876">paper</a> /
+                  <a href="https://github.com/neu-vi/SportsSloMo">code</a>
+                  <p></p>
+                  <p>In this paper, we introduce SportsSloMo, a benchmark consisting of more than 130K video clips and 1M video frames of high-resolution (≥720p) slow-motion sports videos, for human-centric video frame interpolation.</p>
+                </td>
+              </tr>
+            
+            <tr>
+                <td style="padding:20px;width:25%;vertical-align:middle">
+                  <img src="images/fig_iros2023.png" alt="clean-usnob" width="300" height="200">
+                </td>
+                <td width="75%" valign="middle">
+                  <a href="https://jiabenchen.github.io/revisit_event">
+                    <span class="papertitle">Revisiting Event-based Video Frame Interpolation</span>
+                  </a>
+                  <br>
+                  <strong>Jiaben Chen</strong>, 
+                  Yichen Zhu,
+                  <a href="https://dongzelian.com">Dongze Lian</a>,
+                  <a href="https://scholar.google.com/citations?user=f7ox7CIAAAAJ&hl=en">Jiaqi Yang</a>, 
+                  <a href="https://1fwang.github.io">Yifu Wang</a>,
+                  <a href="https://zrrskywalker.github.io">Renrui Zhang</a>,
+                  <a href="http://xinhangliu.com">Xinhang Liu</a>,
+                  <a href="https://shenhanqian.github.io">Shenhan Qian</a>,
+                  <a href="https://mpl.sist.shanghaitech.edu.cn/Director.html">Laurent Kneip</a>,
+                  and <a href="https://svip-lab.github.io">Shenghua Gao</a>
+                  <br>
+                  <em>IEEE/RSJ International Conference on Intelligent Robots and Systems (IROS)</em>, 2023
+                  <br>
+                  <a href="https://jiabenchen.github.io/revisit_event">project page</a> /
+                  <a href="https://arxiv.org/abs/2307.12558">paper</a> /
+                  <a href="https://www.youtube.com/watch?v=IZEmA0L-9_E">video</a>
+                  <p></p>
+                  <p>In this paper, we revist event-based video frame interpolation with a proxy-guided synthesis strategy and a event-guided optical flow refinement strategy.</p>
+                </td>
+              </tr>
+            
+              <tr>
+                <td style="padding:20px;width:25%;vertical-align:middle">
+                  <img src="images/fig_iquery.png" alt="clean-usnob" width="300" height="200">
+                </td>
+                <td width="75%" valign="middle">
+                  <a href="https://jiabenchen.github.io/iQuery/">
+                    <span class="papertitle">iQuery: Instruments as Queries for Audio-Visual Sound Separation</span>
+                  </a>
+                  <br>
+                  <strong>Jiaben Chen</strong>, 
+                  <a href="https://zrrskywalker.github.io">Renrui Zhang</a>,
+                  <a href="https://dongzelian.com">Dongze Lian</a>,
+                  <a href="https://scholar.google.com/citations?user=f7ox7CIAAAAJ&hl=en">Jiaqi Yang</a>, 
+                  <a href="https://adonis-galaxy.github.io/homepage/">Ziyao Zeng</a>,
+                  and <a href="https://www.cis.upenn.edu/~jshi/">Jianbo Shi</a>
+                  <br>
+                  <em>Computer Vision and Pattern Recognition Conference (CVPR)</em>, 2023
+                  <br>
+                  <a href="https://jiabenchen.github.io/iQuery/">project page</a> /
+                  <a href="https://openaccess.thecvf.com/content/CVPR2023/papers/Chen_iQuery_Instruments_As_Queries_for_Audio-Visual_Sound_Separation_CVPR_2023_paper.pdf">paper</a> /
+                  <a href="https://arxiv.org/abs/2212.03814">arXiv</a> /
+                  <a href="https://www.youtube.com/watch?v=EZ9CgknV9Z4">video</a> /
+                  <a href="https://github.com/JiabenChen/iQuery">code</a>
+                  <p></p>
+                  <p>In this paper, we re-formulate visual-sound separation task and propose Instrument as Query (iQuery) with a flexible query expansion mechanism.</p>
+                </td>
+              </tr>
+
+              <tr>
+                <td style="padding:20px;width:25%;vertical-align:middle">
+                  <img src="images/fig_rfp.png" alt="clean-usnob" width="300" height="200">
+                </td>
+                <td width="75%" valign="middle">
+                  <a href="https://xinhangliu.com/nerf_seg">
+                    <span class="papertitle">Unsupervised Multi-View Object Segmentation Using Radiance Field Propagation</span>
+                  </a>
+                  <br>
+                  <a href="http://xinhangliu.com">Xinhang Liu</a>,
+                  <strong>Jiaben Chen</strong>, 
+                  <a href="https://levenberg.github.io">Huai Yu</a>,
+                  <a href="https://yuwingtai.github.io">Yu-Wing Tai</a>,
+                  and <a href="https://scholar.google.com/citations?user=EWfpM74AAAAJ&hl=zh-CN">Chi-Keung Tang</a>
+                  <br>
+                  <em>Neural Information Processing Systems (NeurIPS)</em>, 2022
+                  <br>
+                  <a href="https://xinhangliu.com/nerf_seg">project page</a> /
+                  <a href="https://arxiv.org/abs/2210.00489">paper</a> /
+                  <a href="https://github.com/DarlingHang/radiance_field_propagation">code</a> /
+                  <a href="https://drive.google.com/file/d/1gEqfFXhJm-RdDjzOBGby4kxyo7iPRtoe/view">data</a>
+                  <p></p>
+                  <p>In this paper, we propose radiance field propagation (RFP), a novel approach to segment objects in 3D during reconstruction given only unlabeled multi-view images of a scene.</p>
+                </td>
+              </tr>
+
+              <tr>
+                <td style="padding:20px;width:25%;vertical-align:middle">
+                  <img src="images/fig_devo.png" alt="clean-usnob" width="300" height="200">
+                </td>
+                <td width="75%" valign="middle">
+                  <a href="https://arxiv.org/abs/2202.02556">
+                    <span class="papertitle">DEVO: Visual Odometry in Challenging Conditions using a Stereo Event Depth Camera</span>
+                  </a>
+                  <br>
+                  Yi-Fan Zuo<sup>*</sup>,
+                  <a href="https://scholar.google.com/citations?user=f7ox7CIAAAAJ&hl=en">Jiaqi Yang</a><sup>*</sup>, 
+                  <strong>Jiaben Chen</strong>, 
+                  Xia Wang,
+                  <a href="https://1fwang.github.io">Yifu Wang</a>,
+                  and <a href="https://mpl.sist.shanghaitech.edu.cn/Director.html">Laurent Kneip</a>
+                  <br>
+                  <em>International Conference on Robotics and Automation (ICRA)</em>, 2022
+                  <br>
+                  <a href="https://arxiv.org/abs/2202.02556">paper</a>
+                  <p></p>
+                  <p>In this paper, we proposed a novel real-time visual odometry framework for a stereo setup of a high-resolution event and depth camera to deal with challenging conditions.</p>
+                </td>
+              </tr>
+
+              <tr>
+                <td style="padding:20px;width:25%;vertical-align:middle">
+                  <img src="images/fig_autovideo.png" alt="clean-usnob" width="300" height="200">
+                </td>
+                <td width="75%" valign="middle">
+                  <a href="https://arxiv.org/abs/2108.04212">
+                    <span class="papertitle">AutoVideo: An Automated Video Action Recognition System</span>
+                  </a>
+                  <br>
+                  <a href="https://dczha.com">Daochen Zha</a><sup>*</sup>,
+                  Zaid Pervaiz Bhat<sup>*</sup>,
+                  Yi-Wei Chen<sup>*</sup>,
+                  Yicheng Wang<sup>*</sup>,
+                  Sirui Ding<sup>*</sup>,
+                  <strong>Jiaben Chen</strong><sup>*</sup>,
+                  Kwei-Herng Lai<sup>*</sup>,
+                  Mohammad Qazim Bhat<sup>*</sup>,
+                  Anmoll Kumar Jain,
+                  Alfredo Costilla Reyes,
+                  Na Zou,
+                  and <a href="https://cs.rice.edu/~xh37/index.html">Xia Hu</a>
+                  <br>
+                  <em>International Joint Conference on Artificial Intelligence (IJCAI)</em>, 2022
+                  <br>
+                  <a href="https://arxiv.org/abs/2108.04212">paper</a> /
+                  <a href="https://www.youtube.com/watch?v=BEInjBjeIuo">video</a> /
+                  <a href="https://github.com/datamllab/autovideo">code</a>
+                  <p></p>
+                  <p>In this paper, we presented AutoVideo, a Python system for video action recognition based on Automated Machine Learning.</p>
+                </td>
+              </tr>
+
+              <tr>
+                <td style="padding:20px;width:25%;vertical-align:middle">
+                  <img src="images/fig_vector.png" alt="clean-usnob" width="300" height="200">
+                </td>
+                <td width="75%" valign="middle">
+                  <a href="https://star-datasets.github.io/vector/">
+                    <span class="papertitle">VECtor: A Versatile Event-Centric Benchmark for Multi-Sensor SLAM</span>
+                  </a>
+                  <br>
+                  <a href="https://scholar.google.com/citations?user=XYIKA8IAAAAJ&hl=en">Ling Gao</a><sup>*</sup>, 
+                  Yuxuan Liang<sup>*</sup>,
+                  <a href="https://scholar.google.com/citations?user=f7ox7CIAAAAJ&hl=en">Jiaqi Yang</a><sup>*</sup>, 
+                  Shaoxun Wu,
+                  Chenyu Wang,
+                  <strong>Jiaben Chen</strong>, 
+                  and <a href="https://mpl.sist.shanghaitech.edu.cn/Director.html">Laurent Kneip</a>
+                  <br>
+                  <em>Robotics and Automation Letters (RA-L)</em>, 2022
+                  <em>International Conference on Intelligent Robots and Systems (IROS)</em>, 2022
+                  <br>
+                  <a href="https://arxiv.org/abs/2207.01404">paper</a> /
+                  <a href="https://star-datasets.github.io/vector/">benchmark</a>
+                  <p></p>
+                  <p>In this paper, we proposed the first complete multi-sensor benchmark dataset containing an event-based stereo camera, a regular stereo camera, multiple depth sensors, and an inertial measurement unit.</p>
+                </td>
+              </tr>
+
+          </tbody></table>
 
 
-        <script type="text/javascript" src="//rf.revolvermaps.com/0/0/6.js?i=5mu02nbkyzf&amp;m=7&amp;c=e63100&amp;cr1=ffffff&amp;f=arial&amp;l=0&amp;bv=90&amp;lx=-420&amp;ly=420&amp;hi=20&amp;he=7&amp;hc=a8ddff&amp;rs=80" async="async"></script>
-              <p style="text-align:center;font-size:small;">
-                Last update: Jun, 2023
-              </p>
-
-
-        <!-- Visitor recorder -->
-        <img src='http://www.wjjsoft.com/cgi-bin/_count_wph.cgi?q=profile' width=1 style='visibility: hidden' />
-
-        <!-- Footer -->
-        <div class="uk-section uk-flex uk-flex-center uk-section-secondary uk-height-small" style="background-color: #57aca5">
-            <div class="uk-container uk-container-large uk-text-primary">
-                <p class="uk-text-small uk-text-center">Copyright &copy; 2021 Jiaben Chen. All Rights Reserved.</p>
-                <p class="uk-text-small uk-text-center">Powered by <span uk-icon="uikit">UIkit</span></p>
-            </div>
-        </div>
-
-    </body>
+          <table width="100%" align="center" border="0" cellspacing="0" cellpadding="20"><tbody>
+            <tr>
+              <td>
+                <h2>Miscellanea</h2>
+              </td>
+            </tr>
+            <tr>
+                <td>
+                    <strong>Conference Reviewer:</strong> ECCV 2022, IROS 2022/2023, AAAI 2024.
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <strong>Personal Interests:</strong>
+                    <ul>
+                        <li>I am a huge fan of Stephen Curry.</li>
+                        <li>In my spare time, I enjoy playing basketball and playing FIFA.</li>
+                    </ul>
+                </td>
+            </tr>
+          </tbody></table>
+            
+          <table width="100%" align="center" border="0" cellspacing="0" cellpadding="20"><tbody>
+            <tr>
+              <td style="text-align:center;">
+                <!-- RevolverMaps globe -->
+                <script type="text/javascript" src="//rf.revolvermaps.com/0/0/6.js?i=5mu02nbkyzf&amp;m=7&amp;c=e63100&amp;cr1=ffffff&amp;f=arial&amp;l=0&amp;bv=90&amp;lx=-420&amp;ly=420&amp;hi=20&amp;he=7&amp;hc=a8ddff&amp;rs=80" async="async"></script>
+              </td>
+            </tr>
+            <tr>
+              <td style="text-align:center;">
+                <!-- Last update info -->
+                <p style="font-size:small;">Last update: Oct, 2023</p>
+              </td>
+            </tr>
+        </tbody></table> 
+          
+          <table style="width:100%;border:0px;border-spacing:0px;border-collapse:separate;margin-right:auto;margin-left:auto;"><tbody>
+            <tr>
+              <td style="padding:0px">
+                <br>
+                <p style="text-align:right;font-size:small;">
+                  Design and source code from <a href="https://jonbarron.info/">Jon Barron's website</a>. 
+                </p>
+              </td>
+            </tr>
+          </tbody></table>
+        </td>
+      </tr>
+    </table>
+  </body>
 </html>
