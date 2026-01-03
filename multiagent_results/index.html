@@ -1,0 +1,68 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Multi-Agent Results Gallery</title>
+    <meta name="description" content="Multi-agent generated scenes with prompts and videos." />
+    <link rel="stylesheet" href="./styles.css" />
+  </head>
+  <body>
+    <header class="topbar">
+      <div class="brand">
+        <div class="logo">▶</div>
+        <div class="brand-text">
+          <div class="title" id="projectTitle">Multi-Agent Results</div>
+          <div class="subtitle" id="subtitle">Loading scenes…</div>
+        </div>
+      </div>
+
+      <div class="actions">
+        <input id="search" class="search" placeholder="Search title / prompt / tags / notes…" />
+        <select id="filter" class="select">
+          <option value="all">All tags</option>
+        </select>
+        <button id="toggleDense" class="btn ghost" title="Toggle dense layout">Dense</button>
+      </div>
+    </header>
+
+    <main class="layout">
+      <aside class="sidebar" id="sidebar">
+        <div class="sidebar-head">
+          <div class="sidebar-title">Scenes</div>
+          <div class="sidebar-hint">Click to jump</div>
+        </div>
+        <div class="scene-list" id="sceneList"></div>
+      </aside>
+
+      <section class="content">
+        <div class="content-head">
+          <h1>Gallery</h1>
+          <div class="muted">
+            Each card shows: title, prompt, video, and optional notes. Click a video to enlarge.
+          </div>
+        </div>
+
+        <div class="grid" id="grid"></div>
+      </section>
+    </main>
+
+    <!-- Modal -->
+    <div class="modal" id="modal" aria-hidden="true">
+      <div class="modal-backdrop" id="modalBackdrop"></div>
+      <div class="modal-card" role="dialog" aria-modal="true">
+        <div class="modal-top">
+          <div class="modal-title" id="modalTitle">Scene</div>
+          <div class="modal-actions">
+            <button class="btn small ghost" id="modalCopy">Copy prompt</button>
+            <button class="btn small" id="modalClose">Close</button>
+          </div>
+        </div>
+        <video id="modalVideo" class="modal-video" controls playsinline></video>
+        <pre id="modalPrompt" class="modal-prompt"></pre>
+      </div>
+    </div>
+
+    <script src="./app.js"></script>
+  </body>
+</html>

@@ -1,0 +1,66 @@
+{
+  "projectTitle": "Multi-Agent Results Gallery of Breaking Bad S1E1",
+  "scenes": [
+    {
+      "id": "scene-001",
+      "title": "Scene 001: Desert Landscape",
+      "prompt": "Slow pan across the desert landscape with subtle heat shimmer and light wind moving sparse shrubs. Keep realism, no people.",
+      "video": "./videos/scene001.mp4",
+      "tags": [
+        "example",
+        "scene"
+      ],
+      "notes": ""
+    },
+    {
+      "id": "scene-002",
+      "title": "Scene 002: RV Speeds Past",
+      "prompt": "RV speeds past, kicking up dust; briefly runs over/brushes past the pants. Slight handheld shake, realistic suspension bounce, maintain the same RV design.",
+      "video": "./videos/scene002.mp4",
+      "tags": [
+        "example"
+      ],
+      "notes": ""
+    },
+    {
+      "id": "scene-003",
+      "title": "Scene 003: Driver Panics",
+      "prompt": "Inside the RV, the driver panics while driving; heavy breathing behind the mask, hands tight on the wheel, vehicle vibration. Keep the same face and outfit throughout, no face morphing.",
+      "video": "./videos/scene003.mp4",
+      "tags": [
+        "example"
+      ],
+      "notes": ""
+    },
+    {
+      "id": "scene-004",
+      "title": "Scene 004: Chaotic RV",
+      "prompt": "The RV swerves; objects and cash slide, liquid sloshes. Avoid explicit drugs/graphic bodies; show only generic clutter. Emphasize motion and chaos.",
+      "video": "./videos/scene004.mp4",
+      "tags": [
+        "example"
+      ],
+      "notes": ""
+    },
+    {
+      "id": "scene-005",
+      "title": "Scene 005: RV Rough Stop",
+      "prompt": "RV loses control slightly and comes to a rough stop near a ditch. Big dust plume, then settling silence. Camera handheld but readable.",
+      "video": "./videos/scene005.mp4",
+      "tags": [
+        "example"
+      ],
+      "notes": ""
+    },
+    {
+      "id": "scene-006",
+      "title": "Scene 006: Exit the RV",
+      "prompt": "Using the reference image as the first frame, generate an 8-second shot: the man steps out, stumbles one step, yanks off the gas mask, and gasps. Dust floats and settles. Keep framing and lighting consistent with the first frame; maintain identity and outfit.",
+      "video": "./videos/scene006.mp4",
+      "tags": [
+        "example"
+      ],
+      "notes": ""
+    }
+  ]
+}
