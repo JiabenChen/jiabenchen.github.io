@@ -28,6 +28,46 @@ function uniq(arr) {
   return [...new Set(arr)];
 }
 
+/** ---------- Grouping helpers ---------- */
+function sceneGroup(s) {
+  const tags = (s.tags || []).map(norm);
+
+  if (tags.includes("breakingbad")) return "Breaking Bad";
+  if (tags.includes("madmen")) return "Mad Men";
+
+  const id = (s.id || "").toLowerCase();
+  if (id.startsWith("bb-")) return "Breaking Bad";
+  if (id.startsWith("mm-")) return "Mad Men";
+
+  // fallback: try parse title prefix "XXX — ..."
+  const title = s.title || "";
+  const m = title.match(/^([^—-]+)\s*[—-]\s+/);
+  if (m && m[1]) return m[1].trim();
+
+  return "Other";
+}
+
+function groupScenes(scenes) {
+  const groups = new Map();
+  for (const s of scenes) {
+    const g = sceneGroup(s);
+    if (!groups.has(g)) groups.set(g, []);
+    groups.get(g).push(s);
+  }
+
+  // Preferred group order
+  const order = ["Breaking Bad", "Mad Men"];
+  const out = [];
+  for (const g of order) {
+    if (groups.has(g)) out.push([g, groups.get(g)]);
+  }
+  for (const [g, arr] of groups.entries()) {
+    if (!order.includes(g)) out.push([g, arr]);
+  }
+  return out;
+}
+/** ---------- /Grouping helpers ---------- */
+
 async function load() {
   const res = await fetch("./scenes.json", { cache: "no-store" });
   if (!res.ok) throw new Error(`Failed to load scenes.json (${res.status})`);
@@ -60,26 +100,48 @@ async function load() {
 function renderFilterOptions(scenes) {
   const tags = uniq(scenes.flatMap((s) => s.tags || [])).sort((a, b) => a.localeCompare(b));
   const sel = $("#filter");
-  sel.innerHTML = `<option value="all">All tags</option>` +
-    tags.map(t => `<option value="${escapeHtml(t)}">${escapeHtml(t)}</option>`).join("");
+  sel.innerHTML =
+    `<option value="all">All tags</option>` +
+    tags.map((t) => `<option value="${escapeHtml(t)}">${escapeHtml(t)}</option>`).join("");
 }
 
 function renderSidebar() {
   const list = $("#sceneList");
-  list.innerHTML = state.filtered.map((s, i) => {
-    const active = s.id === state.activeId ? "active" : "";
-    const tag = (s.tags && s.tags[0]) ? s.tags[0] : "scene";
-    const meta = (s.notes || "").replace(/\s+/g, " ").trim();
-    return `
-      <div class="scene-link ${active}" data-id="${escapeHtml(s.id)}" title="Jump to ${escapeHtml(s.title)}">
-        <div class="badge">${escapeHtml(String(i + 1).padStart(2, "0"))}</div>
-        <div class="link-text">
-          <div class="link-title">${escapeHtml(s.title)}</div>
-          <div class="link-meta">${escapeHtml(tag)} • ${escapeHtml(meta.slice(0, 44))}${meta.length > 44 ? "…" : ""}</div>
+  const grouped = groupScenes(state.filtered);
+
+  let globalIndex = 0;
+
+  list.innerHTML = grouped
+    .map(([groupName, scenes]) => {
+      const header = `
+        <div class="group-head">
+          <div class="group-title">${escapeHtml(groupName)}</div>
+          <div class="group-count">${escapeHtml(String(scenes.length))}</div>
         </div>
-      </div>
-    `;
-  }).join("");
+      `;
+
+      const items = scenes
+        .map((s) => {
+          globalIndex += 1;
+          const active = s.id === state.activeId ? "active" : "";
+          const tag = (s.tags && s.tags[0]) ? s.tags[0] : "scene";
+          const meta = (s.notes || "").replace(/\s+/g, " ").trim();
+
+          return `
+            <div class="scene-link ${active}" data-id="${escapeHtml(s.id)}" title="Jump to ${escapeHtml(s.title)}">
+              <div class="badge">${escapeHtml(String(globalIndex).padStart(2, "0"))}</div>
+              <div class="link-text">
+                <div class="link-title">${escapeHtml(s.title)}</div>
+                <div class="link-meta">${escapeHtml(tag)} • ${escapeHtml(meta.slice(0, 44))}${meta.length > 44 ? "…" : ""}</div>
+              </div>
+            </div>
+          `;
+        })
+        .join("");
+
+      return `<div class="group-block">${header}${items}</div>`;
+    })
+    .join("");
 
   list.querySelectorAll(".scene-link").forEach((el) => {
     el.addEventListener("click", () => {
@@ -91,40 +153,61 @@ function renderSidebar() {
 
 function renderGrid() {
   const grid = $("#grid");
-  grid.innerHTML = state.filtered.map((s, i) => {
-    const tags = (s.tags || []).map((t) => `<span class="badge">${escapeHtml(t)}</span>`).join("");
-    const safePrompt = escapeHtml(s.prompt || "");
-    const safeNotes = escapeHtml(s.notes || "");
-    const safeVideo = escapeHtml(s.video || "");
+  const grouped = groupScenes(state.filtered);
 
-    return `
-      <article class="card" id="${escapeHtml(s.id)}">
-        <div class="card-top">
-          <div style="min-width:0">
-            <h3 class="card-title">${escapeHtml(String(i + 1).padStart(2, "0"))}. ${escapeHtml(s.title)}</h3>
-            <div class="card-tags">${tags}</div>
-          </div>
-          <div class="card-actions">
-            <button class="btn small ghost" data-copy="${escapeHtml(s.id)}">Copy prompt</button>
-            <button class="btn small" data-open="${escapeHtml(s.id)}">Open</button>
-          </div>
+  let globalIndex = 0;
+
+  grid.innerHTML = grouped
+    .map(([groupName, scenes]) => {
+      // group header spans full grid width (inline style so no CSS dependency)
+      const header = `
+        <div style="grid-column: 1 / -1; margin: 14px 0 6px; font-weight: 700; opacity: 0.9;">
+          ${escapeHtml(groupName)} <span style="opacity:0.6; font-weight:600;">(${escapeHtml(String(scenes.length))})</span>
         </div>
+      `;
 
-        <div class="prompt">${safePrompt}</div>
+      const cards = scenes
+        .map((s) => {
+          globalIndex += 1;
 
-        <div class="video-wrap">
-          <video
-            src="${safeVideo}"
-            controls
-            playsinline
-            preload="metadata"
-            data-video="${escapeHtml(s.id)}"
-          ></video>
-          ${safeNotes ? `<div class="card-note">${safeNotes}</div>` : ""}
-        </div>
-      </article>
-    `;
-  }).join("");
+          const tags = (s.tags || []).map((t) => `<span class="badge">${escapeHtml(t)}</span>`).join("");
+          const safePrompt = escapeHtml(s.prompt || "");
+          const safeNotes = escapeHtml(s.notes || "");
+          const safeVideo = escapeHtml(s.video || "");
+
+          return `
+            <article class="card" id="${escapeHtml(s.id)}">
+              <div class="card-top">
+                <div style="min-width:0">
+                  <h3 class="card-title">${escapeHtml(String(globalIndex).padStart(2, "0"))}. ${escapeHtml(s.title)}</h3>
+                  <div class="card-tags">${tags}</div>
+                </div>
+                <div class="card-actions">
+                  <button class="btn small ghost" data-copy="${escapeHtml(s.id)}">Copy prompt</button>
+                  <button class="btn small" data-open="${escapeHtml(s.id)}">Open</button>
+                </div>
+              </div>
+
+              <div class="prompt">${safePrompt}</div>
+
+              <div class="video-wrap">
+                <video
+                  src="${safeVideo}"
+                  controls
+                  playsinline
+                  preload="metadata"
+                  data-video="${escapeHtml(s.id)}"
+                ></video>
+                ${safeNotes ? `<div class="card-note">${safeNotes}</div>` : ""}
+              </div>
+            </article>
+          `;
+        })
+        .join("");
+
+      return header + cards;
+    })
+    .join("");
 
   grid.querySelectorAll("button[data-copy]").forEach((btn) => {
     btn.addEventListener("click", async () => {
@@ -162,7 +245,6 @@ async function copyText(text) {
   try {
     await navigator.clipboard.writeText(text);
   } catch {
-    // fallback
     const ta = document.createElement("textarea");
     ta.value = text;
     document.body.appendChild(ta);
