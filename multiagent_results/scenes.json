@@ -1,66 +1,102 @@
 {
-  "projectTitle": "Multi-Agent Results Gallery of Breaking Bad S1E1",
+  "projectTitle": "Multi-Agent Results Gallery (Breaking Bad + Mad Men)",
   "scenes": [
     {
-      "id": "scene-001",
-      "title": "Scene 001: Desert Landscape",
+      "id": "bb-scene-001",
+      "title": "Breaking Bad S1E1 — Scene 001: Desert Landscape",
       "prompt": "Slow pan across the desert landscape with subtle heat shimmer and light wind moving sparse shrubs. Keep realism, no people.",
       "video": "./videos/scene001.mp4",
-      "tags": [
-        "example",
-        "scene"
-      ],
+      "tags": ["breakingbad", "example", "scene"],
       "notes": ""
     },
     {
-      "id": "scene-002",
-      "title": "Scene 002: RV Speeds Past",
+      "id": "bb-scene-002",
+      "title": "Breaking Bad S1E1 — Scene 002: RV Speeds Past",
       "prompt": "RV speeds past, kicking up dust; briefly runs over/brushes past the pants. Slight handheld shake, realistic suspension bounce, maintain the same RV design.",
       "video": "./videos/scene002.mp4",
-      "tags": [
-        "example"
-      ],
+      "tags": ["breakingbad", "example"],
       "notes": ""
     },
     {
-      "id": "scene-003",
-      "title": "Scene 003: Driver Panics",
+      "id": "bb-scene-003",
+      "title": "Breaking Bad S1E1 — Scene 003: Driver Panics",
       "prompt": "Inside the RV, the driver panics while driving; heavy breathing behind the mask, hands tight on the wheel, vehicle vibration. Keep the same face and outfit throughout, no face morphing.",
       "video": "./videos/scene003.mp4",
-      "tags": [
-        "example"
-      ],
+      "tags": ["breakingbad", "example"],
       "notes": ""
     },
     {
-      "id": "scene-004",
-      "title": "Scene 004: Chaotic RV",
+      "id": "bb-scene-004",
+      "title": "Breaking Bad S1E1 — Scene 004: Chaotic RV",
       "prompt": "The RV swerves; objects and cash slide, liquid sloshes. Avoid explicit drugs/graphic bodies; show only generic clutter. Emphasize motion and chaos.",
       "video": "./videos/scene004.mp4",
-      "tags": [
-        "example"
-      ],
+      "tags": ["breakingbad", "example"],
       "notes": ""
     },
     {
-      "id": "scene-005",
-      "title": "Scene 005: RV Rough Stop",
+      "id": "bb-scene-005",
+      "title": "Breaking Bad S1E1 — Scene 005: RV Rough Stop",
       "prompt": "RV loses control slightly and comes to a rough stop near a ditch. Big dust plume, then settling silence. Camera handheld but readable.",
       "video": "./videos/scene005.mp4",
-      "tags": [
-        "example"
-      ],
+      "tags": ["breakingbad", "example"],
       "notes": ""
     },
     {
-      "id": "scene-006",
-      "title": "Scene 006: Exit the RV",
+      "id": "bb-scene-006",
+      "title": "Breaking Bad S1E1 — Scene 006: Exit the RV",
       "prompt": "Using the reference image as the first frame, generate an 8-second shot: the man steps out, stumbles one step, yanks off the gas mask, and gasps. Dust floats and settles. Keep framing and lighting consistent with the first frame; maintain identity and outfit.",
       "video": "./videos/scene006.mp4",
-      "tags": [
-        "example"
-      ],
+      "tags": ["breakingbad", "example"],
       "notes": ""
+    },
+
+    {
+      "id": "mm-scene-001",
+      "title": "Mad Men S1E1 — Clip 001: Bar Establishing (approach from behind)",
+      "prompt": "Use the bar reference as the exact first frame. 8s slow push-in inside a smoky 1960s cocktail lounge toward a suited man seated at the bar from behind; ambient crowd motion and haze; handheld micro-shake only; no text.",
+      "video": "./videos/Madmen_S1_ep1_001.mp4",
+      "tags": ["madmen", "bar", "character", "establishing"],
+      "notes": "New demo: lower cut density, character-focused."
+    },
+    {
+      "id": "mm-scene-002",
+      "title": "Mad Men S1E1 — Clip 002: Continuous Take (Part A) — OTS writing → lighter",
+      "prompt": "Use the reference image as the exact first frame (same framing, same identity, same bar surface, same paper, pen, lighter, one cigarette). 8s continuous take, no cuts: slow straight dolly-in only. Hand keeps writing on the same paper, then reaches for the same lighter to prepare lighting the same cigarette. No new props, no extra cigarettes.",
+      "video": "./videos/Madmen_S1_ep1_002.mp4",
+      "tags": ["madmen", "bar", "character", "continuous", "part-a"],
+      "notes": "Continuity test setup for multi-clip one-take."
+    },
+    {
+      "id": "mm-scene-003",
+      "title": "Mad Men S1E1 — Clip 003: Continuous Take (Part B) — tilt up to profile",
+      "prompt": "Using the provided first frame (taken from the end of the previous clip), continue the SAME continuous shot for 8 seconds: finish the push-in and subtly tilt up to reveal the man’s face in profile as he exhales smoke and keeps thinking. No cuts, no identity drift, consistent lighting and props.",
+      "video": "./videos/Madmen_S1_ep1_003.mp4",
+      "tags": ["madmen", "bar", "character", "continuous", "part-b"],
+      "notes": "Last-frame→first-frame chaining for seamless continuity."
+    },
+    {
+      "id": "mm-scene-004",
+      "title": "Mad Men S1E1 — Clip 004: Waiter enters (subtle interaction)",
+      "prompt": "Medium two-shot at the bar: the seated man and a generic waiter leaning in. 8s minimal motion: the waiter speaks briefly, the man glances up and responds subtly. Keep main character identity stable, warm smoky tungsten lighting, no text, no extra props.",
+      "video": "./videos/Madmen_S1_ep1_004.mp4",
+      "tags": ["madmen", "bar", "character", "interaction"],
+      "notes": ""
+    },
+    {
+      "id": "mm-scene-005",
+      "title": "Mad Men S1E1 — Clip 005: Close-up (micro-expressions + smoke)",
+      "prompt": "Close-up of the man’s face, cigarette smoke drifting, warm tungsten key light, shallow depth of field. 8s micro-expression only: eyes shift slightly, slow exhale smoke. Avoid face warping and random zoom; maintain identity.",
+      "video": "./videos/Madmen_S1_ep1_005.mp4",
+      "tags": ["madmen", "character", "closeup"],
+      "notes": ""
+    },
+    {
+      "id": "mm-scene-006",
+      "title": "Mad Men S1E1 — Clip 006: Return to medium (put down pen → rise to leave)",
+      "prompt": "Medium shot at the bar: the man puts down the pen, takes a final drag, and starts to rise from the stool. 8s calm motion, warm smoky lighting, handheld realism. Keep identity/wardrobe/bar continuity; no new props; no random camera zoom.",
+      "video": "./videos/Madmen_S1_ep1_006.mp4",
+      "tags": ["madmen", "bar", "character", "wrap"],
+      "notes": "."
     }
   ]
 }
