@@ -224,6 +224,27 @@ video{
   color: var(--text);
 }
 
+.group-block { margin-bottom: 10px; }
+.group-head {
+  display: flex;
+  align-items: baseline;
+  justify-content: space-between;
+  margin: 10px 12px 6px;
+  opacity: 0.75;
+}
+.group-title {
+  font-size: 12px;
+  font-weight: 700;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+}
+.group-count {
+  font-size: 12px;
+  font-weight: 600;
+  opacity: 0.7;
+}
+
+
 /* dense toggle */
 body.dense .grid{grid-template-columns: repeat(3, minmax(0, 1fr))}
 body.dense .prompt{display:none}
@@ -235,3 +256,4 @@ body.dense .prompt{display:none}
   .grid{grid-template-columns: 1fr}
   body.dense .grid{grid-template-columns: 1fr}
 }
+
