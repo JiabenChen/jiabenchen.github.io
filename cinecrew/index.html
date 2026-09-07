@@ -8,6 +8,124 @@
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="styles.css" />
+
+  <style>
+    /* Paper metadata shown directly below the main title */
+    .paper-meta {
+      margin: 20px 0 22px;
+    }
+
+    .paper-venue {
+      display: inline-flex;
+      align-items: center;
+      padding: 6px 11px;
+      margin-bottom: 14px;
+      border: 1px solid rgba(255, 255, 255, 0.14);
+      border-radius: 999px;
+      background: rgba(255, 255, 255, 0.06);
+      font-size: 0.82rem;
+      font-weight: 700;
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+    }
+
+    .paper-authors {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 7px 14px;
+      align-items: baseline;
+      font-size: 1rem;
+      line-height: 1.65;
+      font-weight: 500;
+    }
+
+    .paper-authors a,
+    .paper-authors .author-name {
+      color: inherit;
+      text-decoration: none;
+      white-space: nowrap;
+    }
+
+    .paper-authors a {
+      border-bottom: 1px solid rgba(255, 255, 255, 0.28);
+      transition: opacity 0.2s ease, border-color 0.2s ease;
+    }
+
+    .paper-authors a:hover {
+      opacity: 0.78;
+      border-bottom-color: currentColor;
+    }
+
+    .paper-authors sup,
+    .paper-affiliations sup {
+      font-size: 0.7em;
+      vertical-align: super;
+      line-height: 0;
+    }
+
+    .paper-affiliations {
+      display: flex;
+      flex-direction: column;
+      gap: 3px;
+      margin-top: 10px;
+      font-size: 0.86rem;
+      line-height: 1.5;
+      opacity: 0.76;
+    }
+
+    .paper-note {
+      margin-top: 7px;
+      font-size: 0.8rem;
+      opacity: 0.62;
+    }
+
+    .paper-links {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 10px;
+      margin-top: 14px;
+    }
+
+    .paper-link {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      min-height: 38px;
+      padding: 8px 13px;
+      border: 1px solid rgba(255, 255, 255, 0.14);
+      border-radius: 10px;
+      background: rgba(255, 255, 255, 0.055);
+      color: inherit;
+      text-decoration: none;
+      font-size: 0.88rem;
+      font-weight: 600;
+      transition: transform 0.2s ease, background 0.2s ease, border-color 0.2s ease;
+    }
+
+    .paper-link:hover {
+      transform: translateY(-1px);
+      background: rgba(255, 255, 255, 0.09);
+      border-color: rgba(255, 255, 255, 0.24);
+    }
+
+    .paper-link svg {
+      width: 17px;
+      height: 17px;
+      flex: 0 0 auto;
+      fill: currentColor;
+    }
+
+    @media (max-width: 640px) {
+      .paper-authors {
+        gap: 5px 10px;
+        font-size: 0.94rem;
+      }
+
+      .paper-affiliations {
+        font-size: 0.82rem;
+      }
+    }
+  </style>
 </head>
 <body>
   <div class="page-glow"></div>
@@ -37,6 +155,44 @@
         <div class="hero-copy">
           <div class="eyebrow">Project Homepage</div>
           <h1>Better Call CineCrew: <span>Consistent Ultra-Long</span> Narrative-to-Film Generation</h1>
+
+          <div class="paper-meta" aria-label="Paper information">
+            <div class="paper-venue">ECCV 2026</div>
+
+            <div class="paper-authors">
+              <a href="http://jiabenchen.github.io/" target="_blank" rel="noopener noreferrer">Jiaben Chen<sup>1,*</sup></a>
+              <a href="https://sixundong.com/" target="_blank" rel="noopener noreferrer">Sixun Dong<sup>1,*</sup></a>
+              <a href="https://zhouqqhh.github.io/" target="_blank" rel="noopener noreferrer">Qinhong Zhou<sup>1</sup></a>
+              <span class="author-name">Raine Ma<sup>1</sup></span>
+              <a href="https://frank-zy-dou.github.io/" target="_blank" rel="noopener noreferrer">Zhiyang Dou<sup>2</sup></a>
+              <a href="https://people.csail.mit.edu/wojciech/" target="_blank" rel="noopener noreferrer">Wojciech Matusik<sup>2</sup></a>
+              <a href="https://people.csail.mit.edu/ganchuang/" target="_blank" rel="noopener noreferrer">Chuang Gan<sup>1,†</sup></a>
+            </div>
+
+            <div class="paper-affiliations">
+              <span><sup>1</sup> University of Massachusetts Amherst, Amherst, MA 01003, USA</span>
+              <span><sup>2</sup> Massachusetts Institute of Technology, Cambridge, MA 02139, USA</span>
+            </div>
+
+            <div class="paper-note">* Equal contribution. † Corresponding author.</div>
+
+            <div class="paper-links">
+              <a class="paper-link" href="https://arxiv.org/abs/8048313" target="_blank" rel="noopener noreferrer" aria-label="arXiv paper">
+                <svg viewBox="0 0 24 24" aria-hidden="true">
+                  <path d="M7.6 4.2h8.8a2.6 2.6 0 0 1 2.6 2.6v10.4a2.6 2.6 0 0 1-2.6 2.6H7.6A2.6 2.6 0 0 1 5 17.2V6.8a2.6 2.6 0 0 1 2.6-2.6Zm1.05 4.1v1.45h6.7V8.3h-6.7Zm0 3.05v1.45h6.7v-1.45h-6.7Zm0 3.05v1.45h4.7V14.4h-4.7Z"/>
+                </svg>
+                <span>arXiv</span>
+              </a>
+
+              <a class="paper-link" href="https://github.com/Ironieser/CineCrew" target="_blank" rel="noopener noreferrer" aria-label="GitHub repository">
+                <svg viewBox="0 0 24 24" aria-hidden="true">
+                  <path d="M12 .7a11.5 11.5 0 0 0-3.64 22.41c.58.1.79-.25.79-.56v-2.23c-3.23.7-3.91-1.37-3.91-1.37-.53-1.34-1.29-1.7-1.29-1.7-1.05-.72.08-.71.08-.71 1.17.08 1.78 1.2 1.78 1.2 1.03 1.78 2.71 1.27 3.37.97.1-.75.4-1.27.74-1.56-2.58-.29-5.29-1.29-5.29-5.72 0-1.27.45-2.3 1.2-3.11-.12-.3-.52-1.48.11-3.08 0 0 .98-.31 3.17 1.19A10.98 10.98 0 0 1 12 6.05c.98 0 1.95.13 2.87.38 2.2-1.5 3.17-1.19 3.17-1.19.63 1.6.23 2.78.11 3.08.75.81 1.2 1.84 1.2 3.11 0 4.44-2.72 5.42-5.31 5.71.42.36.79 1.07.79 2.16v3.25c0 .31.21.67.8.56A11.5 11.5 0 0 0 12 .7Z"/>
+                </svg>
+                <span>GitHub</span>
+              </a>
+            </div>
+          </div>
+
           <p>
             A multi-agent cinematic studio for transforming scripts into coherent, multi-shot,
             long-form film sequences with stable characters, scene continuity, and production-aware storytelling.
